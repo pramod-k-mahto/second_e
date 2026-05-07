@@ -1,0 +1,3 @@
+id,business_type_id,feature_code,is_enabled,config
+2,4,kds_mode,False,
+1,1,batch_tracking,False,

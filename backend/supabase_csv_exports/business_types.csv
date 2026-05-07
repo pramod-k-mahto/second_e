@@ -1,0 +1,6 @@
+id,code,name,description,is_active,created_at,updated_at,default_menu_template_id
+1,GENERAL,General Business,Standard business accounting and inventory management.,True,2026-03-26 13:50:38.816460+00:00,2026-03-26 13:50:38.816460+00:00,
+2,PHARMACY,Pharmacy,"Industry-specific features for medical stores, drug tracking, and expiry management.",True,2026-03-26 13:50:38.816460+00:00,2026-03-26 13:50:38.816460+00:00,
+3,RETAIL,Retail Shop,"Point of Sale, inventory barcodes, and retail management.",True,2026-03-26 13:50:38.816460+00:00,2026-03-26 13:50:38.816460+00:00,
+4,RESTAURANT,Restaurant / Cafe,"Table management, KDS, and ingredient tracking.",True,2026-03-26 13:50:38.816460+00:00,2026-03-26 13:50:38.816460+00:00,
+5,GARMENT,Garment Shop,"Size, color, and textile variant management.",True,2026-03-26 13:50:38.816460+00:00,2026-03-26 13:50:38.816460+00:00,

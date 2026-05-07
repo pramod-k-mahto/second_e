@@ -1,0 +1,8 @@
+id,company_id,item_id,unit_code,is_base,factor_to_base,decimals,sort_order
+3,6,6,PCS,True,1.0,0,1
+5,6,5,PCS,True,1.0,0,1
+6,24,15,PCS,True,1.0,0,1
+15,14,1,PCS,True,1.0,0,1
+16,14,16,PCS,True,1.0,0,1
+17,14,16,UNIT,False,1.0,0,2
+18,14,20,PCS,True,1.0,0,1

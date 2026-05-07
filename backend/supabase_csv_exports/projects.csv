@@ -1,0 +1,3 @@
+id,company_id,name,code,is_active,created_at,updated_at
+1,6,Hydropower,Pr-oo1,True,2025-12-09 12:23:04.949348+00:00,2025-12-09 12:23:04.949353+00:00
+2,14,Cleaning Service,,True,2026-02-13 23:03:49.954332+00:00,2026-02-13 23:03:49.954335+00:00

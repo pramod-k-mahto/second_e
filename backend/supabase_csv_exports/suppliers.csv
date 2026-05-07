@@ -1,0 +1,11 @@
+id,company_id,name,email,phone,ledger_id,contact_person,mobile,website,country,state,district,city,area,street_address,postal_code,bank_name,account_holder_name,account_number,branch_name,ifsc_swift_routing_number,preferred_payment_mode,credit_limit,credit_days,vat_gst_number,pan_number,registration_type,hsn_sac_relevancy,tax_exempt,supplier_type,product_categories,delivery_terms,return_policy,is_active,notes,documents,rating,tenant_id,assigned_employee_id,created_by_id,updated_by_id,created_at,updated_at
+6,6,Riyansh,,,266,sasasaaa,,,,,,,,,,,,,,,,,,,,,,False,Local,,,,True,,,,,,7.0,7.0,2025-12-11 11:49:41.642452,2025-12-11 11:49:41.642457
+7,24,Supplier A,,,268,,,,,,,,,,,,,,,,,,,,,,,False,,,,,True,,,,20.0,,18.0,18.0,2025-12-12 15:07:01.049437,2025-12-12 15:07:01.049445
+4,6,Rythem Kala Suppliers,,3232323,501,abc,32323,,,,,,,,,,,,,,,,,,,,,False,Distributor,,,,True,,,,,,7.0,7.0,2025-11-29 06:48:28.413399,2025-12-18 15:03:12.717197
+3,6,Informix Solution,,8908089,502,sanjiv,8908089,,,,,,,,,,,,,,,,,,,,,False,,,,,True,,,,,,7.0,7.0,2025-11-29 06:16:12.596829,2025-12-18 15:03:12.727641
+5,6,Zenith Suppliers,,u7797,503,Sachit baodha,7979,,,,,,,,,,,,,,,,,,,,,False,,,,,True,,,,,,7.0,7.0,2025-12-01 14:40:44.204988,2025-12-18 15:03:12.730112
+1,14,Informix Solution,,6492641946,500,,,,,,,,,,,,,,,,,,,,,,,False,,,,,True,,,,,,,,,2025-12-16 14:12:41.197827
+8,14,Yamaha Show Room,,,737,,,,,,,,,,,,,,,,,,,,,,,False,Distributor,,,,True,,,,12.0,,9.0,9.0,2026-02-28 10:07:57.051409,2026-02-28 10:07:57.051433
+2,23,Informix,,809808,780,sanjiv,8098098,,,,,,,,,,,,,,,,,,,,,False,Local,,,,True,,,,19.0,,17.0,17.0,2025-11-27 17:27:50.735941,2026-03-11 14:52:43.641944
+9,14,Supplier A,,,1048,,,,Nepal,,Kathmandu,kathmandu,,ktm,44600,,,,,,,,,17634431,,,,False,,,,,True,,,,12.0,,9.0,9.0,2026-04-12 06:21:49.761315,2026-04-12 06:21:49.761319
+10,14,ABC Suppliers,,,1123,,,,,,,,,,,,,,,,,,,,,,,False,,,,,True,,,,12.0,,9.0,9.0,2026-04-24 08:51:48.313386,2026-04-24 08:51:48.313401

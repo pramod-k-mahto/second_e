@@ -1,0 +1,179 @@
+id,code,label,module,parent_id,sort_order,is_active
+6,sales.invoice.create,New Sales Invoice,sales,,11.0,True
+55,settings.language,Language,Settings,51.0,903.0,True
+93,DELIVERY,Delivery,Delivery,,75.0,True
+94,delivery.places_partners,Places & Partners,Delivery,93.0,76.0,True
+95,delivery.packages,Packages & Dispatches,Delivery,93.0,77.0,True
+96,PERFORMANCE,Performance,Performance,,85.0,True
+97,performance.dashboard,Performance Dashboard,Performance,96.0,86.0,True
+29,settings.plan,My Plan,Settings,,10.0,True
+98,performance.rewards,Rewards,Performance,96.0,87.0,True
+99,RESOURCES,Resources,Resources,,95.0,True
+100,resources.library,Library,Resources,99.0,96.0,True
+101,communications.logs,Comm. Logs,Resources,99.0,97.0,True
+19,reports.stock,Stock Status & Alerts,Reports,44.0,206.0,True
+32,DASHBOARD,Dashboard,General,,10.0,True
+33,COMPANIES,Companies,Setup,,20.0,True
+34,USERS,Users,Setup,,30.0,True
+35,SALES,Sales,Sales,,40.0,True
+38,PURCHASES,Purchases,Purchases,,50.0,True
+103,reports.revenue_analytics,Revenue Analytics,Dashboard Analytics,44.0,5.0,True
+104,reports.performance_insights,Performance Insights,Dashboard Analytics,44.0,6.0,True
+41,INVENTORY,Inventory,Inventory,,60.0,True
+47,accounting.masters,Master,Accounting,,100.0,True
+48,accounting.masters.ledgers,Ledgers,Accounting,47.0,101.0,True
+43,INVENTORY_STOCK_SUMMARY,Stock Summary,Reports,,200.0,True
+44,REPORTS,Reports,Reports,,210.0,True
+45,REPORTS_SALES,Sales Reports,Reports,44.0,211.0,True
+46,REPORTS_PURCHASES,Purchase Reports,Reports,44.0,212.0,True
+13,inventory.categories,Categories,Inventory,41.0,62.0,True
+14,inventory.brands,Brands,Inventory,41.0,64.0,True
+81,reports.monthly_income_expense,Monthly Income & Expense,Reports,44.0,219.0,True
+108,dashboard.expenses,Expenses Widget,Dashboard Analytics,32.0,4.0,True
+50,inventory.subcategories,Subcategories,Inventory,41.0,63.0,True
+51,settings,Settings,Settings,,900.0,True
+109,dashboard.net_income,Net-Income Widget,Dashboard Analytics,32.0,5.0,True
+110,dashboard.receivables,Receivables Summary Widget,Dashboard Analytics,32.0,6.0,True
+111,dashboard.payables,Payables Summary Widget,Dashboard Analytics,32.0,7.0,True
+112,dashboard.balances,Balances (Cash/Bank) Widget,Dashboard Analytics,32.0,8.0,True
+113,dashboard.income_vs_expenses,Income vs Expenses Waterfall Chart,Dashboard Analytics,32.0,9.0,True
+114,dashboard.recent_activity,Recent Activity Table,Dashboard Analytics,32.0,10.0,True
+115,dashboard.top_parties,Top Customers/Suppliers Table,Dashboard Analytics,32.0,11.0,True
+127,header.theme_toggle,Theme Toggle (Dark/Light) 🌗,System Shell,,203.0,True
+130,group.analytic_dashboard_widget_1774974122395,Analytic Dashboard Widget,Menu Group,,,True
+129,group.top_menu_bar_1774857497301,POS,Menu Group,,,True
+131,group.report_1775037488803,Report,Menu Group,,,True
+133,group.payroll_1775037545095,Payroll,Menu Group,,,True
+72,settings.print,Print,Settings,,,True
+73,settings.prompte,Promote/Prompte,Settings,,,True
+74,settings.website_orders,Website Orders,Settings,,,True
+75,settings.website_integration,Website Integration,Settings,,,True
+42,DEPRECATED_INVENTORY_ITEMS_42,Items,Inventory,41.0,61.0,True
+53,settings.plans,Plans,Settings,51.0,906.0,True
+80,accounting.voucher.collection_receipt,Collection Receipt,Accounting,,,True
+78,reports.online_orders,Online Orders,Reports,44.0,220.0,True
+31,settings.menu_permissions,Menu Permissions,Settings,51.0,907.0,True
+87,REPORTS_RESTAURANT_SUMMARY,Restaurant Summary,Reports,45.0,215.0,True
+85,accounting.masters.sales_target,Sales Target Setup,Accounting,47.0,105.0,True
+57,POS,POS,POS,,45.0,True
+24,pos.billing,POS Billing,POS,57.0,46.0,True
+86,sales.restaurant_pos,Restaurant POS,POS,57.0,47.0,True
+88,pos.tables,Table Management,POS,57.0,48.0,True
+56,TASKS,Tasks,Tasks,,70.0,True
+89,tasks.list,Task Board,Tasks,56.0,71.0,True
+90,tasks.heads,Task Heads,Tasks,56.0,72.0,True
+91,tasks.performance_report,Performance Report,Tasks,56.0,73.0,True
+36,DEPRECATED_SALES_INVOICES_36,Sales Invoices,Sales,35.0,41.0,False
+37,DEPRECATED_SALES_RETURNS_37,Sales Returns,Sales,35.0,42.0,False
+39,DEPRECATED_PURCHASE_BILLS_39,Purchase Bills,Purchases,38.0,51.0,False
+40,DEPRECATED_PURCHASE_RETURNS_40,Purchase Returns,Purchases,38.0,52.0,False
+49,reports.ledger,Ledger Report,Reports,44.0,213.0,True
+77,reports.income_expense_summary,Income/Expense Summary,Reports,44.0,218.0,True
+5,sales.invoice.list,Sales Invoices,Sales,35.0,41.0,True
+7,sales.order.list,Sales Orders,Sales,35.0,43.0,True
+8,sales.return.list,Sales Returns,Sales,35.0,42.0,True
+10,purchases.order.list,Purchase Orders,Purchases,38.0,53.0,True
+11,purchases.return.list,Purchase Returns,Purchases,38.0,52.0,True
+12,inventory.items,Items,Inventory,41.0,61.0,True
+28,accounting.masters.payment-modes,Payment Modes,Accounting,47.0,106.0,True
+58,payroll.dashboard,Payroll Dashboard,Payroll,92.0,81.0,True
+59,payroll.employees,Employees,Payroll,92.0,82.0,True
+60,payroll.payheads,Payheads,Payroll,92.0,83.0,True
+61,payroll.shifts,Shifts,Payroll,92.0,84.0,True
+62,payroll.shift_assignments,Assignments,Payroll,92.0,85.0,True
+63,payroll.devices,Biometric Devices,Payroll,92.0,86.0,True
+65,payroll.attendance,Attendance,Payroll,92.0,87.0,True
+66,payroll.leave,Leave Management,Payroll,92.0,88.0,True
+68,payroll.runs,Payroll Runs,Payroll,92.0,89.0,True
+69,inventory.warehouses,Warehouses,Inventory,41.0,65.0,True
+70,inventory.stock_transfers,Stock Transfers,Inventory,41.0,66.0,True
+82,reports.mis_cash_flow,Cash Flow Report,Reports,44.0,221.0,True
+83,reports.mis_fund_management,Fund Management,Reports,44.0,222.0,True
+84,reports.mis_target_vs_actual,Target Vs Actual,Reports,44.0,223.0,True
+92,PAYROLL,Payroll,Payroll,,80.0,True
+3,accounting.voucher.contra,Contra Voucher,Accounting,47.0,113.0,True
+4,accounting.voucher.journal,Journal Voucher,Accounting,47.0,112.0,True
+15,reports.trial_balance,Trial Balance,Reports,44.0,214.0,True
+16,reports.daybook,Daybook,Reports,44.0,215.0,True
+17,reports.pnl,Profit & Loss,Reports,44.0,217.0,True
+18,reports.balance_sheet,Balance Sheet,Reports,44.0,216.0,True
+20,reports.customers,Customer Reports,Reports,45.0,2111.0,True
+21,reports.suppliers,Supplier Reports,Reports,46.0,2121.0,True
+22,reports.sales_summary,Sales Summary,Reports,45.0,2112.0,True
+102,reports.quick_analysis,Quick Analysis report,Reports,44.0,205.0,True
+116,dashboard.date_filters,Date Quick Filters & Pickers,Dashboard Analytics,32.0,12.0,True
+117,dashboard.master_panel,Master Panel Trigger 📂,Dashboard Analytics,32.0,13.0,True
+118,dashboard.export_actions,Export CSV Buttons,Dashboard Analytics,32.0,14.0,True
+119,header.notifications,General Notifications 🔔,System Shell,,201.0,True
+120,header.pending_orders,Pending Orders Counter 🔔,System Shell,,202.0,True
+105,dashboard.total_sales,Total Sales Widget,Dashboard Analytics,32.0,1.0,True
+106,dashboard.total_purchase,Total Purchase Widget,Dashboard Analytics,32.0,2.0,True
+107,dashboard.sales_vs_margin,Sales vs Gross Margin,Dashboard Analytics,32.0,3.0,True
+121,header.calculator,Calculator Tool 🧮,System Shell,,203.0,True
+122,sidebar.nav.companies,Companies Link 🏢,System Shell,,204.0,True
+123,sidebar.nav.plans,Subscription/Plans Link 📦,System Shell,,205.0,True
+124,sidebar.nav.users,User Management Link 👤,System Shell,,206.0,True
+125,sidebar.nav.backup,Backup & Restore Tools 💾,System Shell,,207.0,True
+126,sidebar.nav.import,Import Tools 🔁,System Shell,,208.0,True
+9,purchases.bill.list,Purchase Invoices,Purchases,38.0,51.0,True
+128,group.my_fav_menu_1774849674139,Transaction,Menu Group,,,True
+134,group.tasks_1775037563810,Tasks,Menu Group,,,True
+23,reports.purchase_summary,Purchase Summary,Reports,46.0,2122.0,True
+64,payroll.device_users,Device Users,Payroll,92.0,90.0,True
+67,payroll.pay_structures,Pay Structures,Payroll,92.0,91.0,True
+1,accounting.voucher.payment,Payment Voucher,Accounting,47.0,110.0,True
+2,accounting.voucher.receipt,Receipt Voucher,Accounting,47.0,111.0,True
+135,sales.customers,Customers Master,Sales,35.0,44.0,True
+136,purchases.suppliers,Suppliers Master,Purchases,38.0,54.0,True
+137,reports.receivable_payable,Receivable/Payable,Reports,44.0,224.0,True
+30,settings.users,Users & Roles,Settings,51.0,905.0,True
+71,settings.currency,Currency Settings,Settings,51.0,908.0,True
+132,group.settings_1775037518624,Setup,Menu Group,,,True
+138,settings.notifications,Notification Settings,Settings,51.0,909.0,True
+76,settings.inventory_valuation,Inventory Valuation,Settings,51.0,910.0,True
+139,settings.cost-centers,Cost Centers,Settings,51.0,911.0,True
+141,group.master_1775113957776,Master,Menu Group,,,True
+142,group.delivery_1775113971076,Delivery,Menu Group,,,True
+143,group.test_menu_1775145787401,Test Menu,Menu Group,,,True
+144,admin.announcements,System Broadcasts,System Shell,,210.0,True
+145,admin.platform_bookkeeping,Platform Bookkeeping,Platform,,211.0,True
+146,admin.settings,Admin Settings,Platform,,212.0,True
+147,reports.profit_loss_comparison,P&L Comparison,Reports,44.0,225.0,True
+148,reports.sales_purchase_summary,Sales vs Purchase Summary,Reports,44.0,226.0,True
+149,reports.customer_ledger,Customer Ledger,Reports,45.0,2113.0,True
+150,reports.supplier_ledger,Supplier Ledger,Reports,46.0,2123.0,True
+151,reports.stock_movements,Stock Movement Log,Reports,44.0,227.0,True
+152,reports.stock_summary,Detailed Stock Summary,Reports,44.0,228.0,True
+153,reports.item_wise_profit,Item Wise Profit,Reports,45.0,2114.0,True
+154,reports.fixed_assets,Depreciation Report,Reports,44.0,230.0,True
+155,reports.sales_mix,Sales Mix Report,Reports,45.0,2115.0,True
+156,reports.expenses_mix,Expenses Mix Report,Reports,44.0,229.0,True
+157,reports.item_history,Item History,Reports,44.0,231.0,True
+158,reports.inventory_history,Item History,Reports,44.0,231.0,True
+159,inventory.bom,BOM Management,Inventory,41.0,220.0,True
+160,inventory.production_orders,Production Orders,Inventory,41.0,221.0,True
+161,DOCUMENT,Document,Document,,55.0,True
+162,document.upload,Upload Document,Document,161.0,56.0,True
+163,document.list,Document List,Document,161.0,57.0,True
+164,reports.bom_transactions,BOM transactions,Reports,44.0,232.0,True
+165,payroll.cost_centers,Cost Centers,Payroll,92.0,92.0,True
+166,payroll.commission_rules,Commission Rules,Payroll,92.0,93.0,True
+167,payroll.commission_report,Commission Report,Payroll,92.0,94.0,True
+340,MANUFACTURING_ERP,Manufacturing ERP,Manufacturing,,230.0,True
+341,manufacturing.dashboard,Dashboard,Manufacturing,340.0,231.0,True
+342,manufacturing.bom_master,BOM Master,Manufacturing,340.0,232.0,True
+343,manufacturing.production_order,Production Order,Manufacturing,340.0,233.0,True
+344,manufacturing.material_issue,Material Issue,Manufacturing,340.0,234.0,True
+345,manufacturing.wip,Work In Progress,Manufacturing,340.0,235.0,True
+346,manufacturing.production_entry,Production Entry,Manufacturing,340.0,236.0,True
+347,manufacturing.finished_goods_receive,Finished Goods Receive,Manufacturing,340.0,237.0,True
+348,manufacturing.wastage_scrap,Wastage / Scrap,Manufacturing,340.0,238.0,True
+349,manufacturing.production_costing,Production Costing,Manufacturing,340.0,239.0,True
+350,manufacturing.reports,Reports,Manufacturing,340.0,240.0,True
+351,manufacturing.settings,Settings,Manufacturing,340.0,241.0,True
+352,manufacturing.ai_documents,AI Documents,Manufacturing,340.0,242.0,True
+140,settings.projects,Projects,Settings,51.0,912.0,True
+367,settings.duty_taxes,Duties & Taxes,Settings,51.0,903.0,True
+366,manufacturing.fg_journal_entry,FG Journal Entry,Manufacturing,340.0,243.0,True
+52,settings.company,Company,Settings,51.0,901.0,True
+54,settings.calendar,Calendar,Settings,51.0,902.0,True

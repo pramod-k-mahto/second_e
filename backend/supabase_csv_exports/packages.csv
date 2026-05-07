@@ -1,0 +1,2 @@
+id,company_id,invoice_id,delivery_partner_id,delivery_place_id,tracking_number,status,cod_amount,shipping_charge,created_at,updated_at
+11,14,188,2,2,sfs,DISPATCHED,608.5,100.0,2026-04-09 09:49:01.284506+00:00,2026-04-09 09:49:01.284513+00:00

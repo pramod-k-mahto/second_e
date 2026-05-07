@@ -1,0 +1,10 @@
+id,business_type,field_code,display_label,is_active,is_required,group_name,sort_order
+1,PHARMACY,generic_name,Generic Name,True,False,Medical Info,1
+2,PHARMACY,dosage_form,Dosage Form,True,False,Medical Info,2
+3,PHARMACY,drug_schedule,Drug Schedule,True,False,Medical Info,3
+4,PHARMACY,composition,Composition,True,False,Medical Info,4
+5,PHARMACY,strength,Strength,True,False,Medical Info,5
+6,PHARMACY,packing,Packing,True,False,Medical Info,6
+7,PHARMACY,prescription_required,Prescription Required,True,False,Rules,7
+8,PHARMACY,is_batch_tracked,Track Batch Number,True,False,Inventory,8
+9,PHARMACY,is_expiry_tracked,Track Expiry Date,True,False,Inventory,9

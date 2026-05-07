@@ -1,0 +1,23 @@
+id,company_id,name,email,phone,ledger_id,customer_type,contact_person,mobile,billing_address,country,state,district,city,address,postal_code,shipping_address_same_as_billing,shipping_city,shipping_address,shipping_phone,vat_gst_number,pan_number,registration_type,tax_exempt,credit_limit,credit_days,default_payment_method,opening_balance,balance_type,price_level,allow_credit,preferred_delivery_time,preferred_sales_person,category,notes,last_purchase_date,rating,tenant_id,created_by_id,updated_by_id,created_at,updated_at
+2,6,Deprocs,,,127,Corporate,sanjiv,,,,,,,,,False,,,,,,,False,,,,,,,False,,,,,,,,,,2025-11-29 06:12:55.720550,2025-11-29 06:14:04.801881
+3,6,Aalopalo,surendra@gmail.com,422y9462,127,Retail,surendra,2962639263,,,,,,,,False,,,,,,,False,,,,,,,False,,,,,,,,,,2025-11-29 09:26:13.744327,2025-11-29 09:26:13.744413
+4,6,Manish Kafle,manish@gmail.com,,127,,Manish Kafle,8908089,,,,,,,,False,,,,,,,False,,,,,,,False,,,,,,,,,,2025-12-01 16:37:47.172188,2025-12-01 16:37:47.172193
+5,6,Riyansh,,,127,Retail,sasasa,,,,,,,,,False,,,,,,,False,,,,,,,False,,,,,,,,,,2025-12-11 07:32:49.772015,2025-12-11 07:32:49.772021
+7,24,Customer B,,,269,,,,,,,,,,,False,,,,,,,False,,,,,,,False,,,,,,,,,,2025-12-12 15:07:17.398782,2025-12-12 15:07:17.398818
+16,14,john,john@gmail.com,5455666,734,,,,,,,,,"Kathmandu
+Kathmandu",,True,,"Kathmandu
+Kathmandu",5455666,,,,False,,,,,,,True,,,,,,,12.0,,,2026-02-25 10:01:06.992944,2026-02-26 09:07:14.664161
+17,14,Manish Kafle,manish@gmail.com,8908089,735,,,,,,,,,ktm,,True,,ktm,8908089,,,,False,,,,,,,True,,,,,,,12.0,,,2026-02-25 13:42:38.355125,2026-02-26 09:07:14.664980
+18,14,Narendra,narendra@gmail.com,98426942,736,,,,,,,,,kathmandu,,True,,kathmandu,98426942,,,,False,,,,,,,True,,,,,,,12.0,,,2026-02-26 13:42:21.655866,2026-02-26 14:12:03.817833
+19,14,Manish 68768,kkkkk@gmail.com,89080896,974,,,,,,,,,ktm,,True,,ktm,89080896,,,,False,,,,,,,True,,,,,,,12.0,,,2026-03-23 12:43:25.439967,2026-03-25 05:10:27.779500
+9,6,Walk In Customer,,,588,Retail,,,,,,,,,,False,,,,,,,False,,,Cash,,,,False,,,,,,,,,,2026-02-13 14:32:16.812317,2026-02-13 14:32:16.812324
+20,40,Walking Customer,,,1038,Retail,,,,,,,,,,False,,,,,,,False,,,,,,,False,,,,,,,,,,2026-04-04 01:51:01.059934,2026-04-04 01:51:01.059943
+26,21,A-One Cafe and Restaurant,,,134,,,,,,,,,,,True,,,,,,,False,,,,,,,True,,,,,,,17.0,,,2026-04-05 02:38:38.614172,2026-04-05 02:38:38.614177
+6,6,Biltu Cusromer,,,267,Retail,,,"Kathmandu, Nepal",Nepal,,,,Kathmandu,,False,,,,456789652,456789652,,False,,,,,,,False,,,,,,,,,,2025-12-11 11:53:07.395909,2026-02-13 07:21:08.097149
+10,14,Walking Customer,,,645,Retail,,,,,,,,,,False,,,,,,,False,,,,,,,False,,,,,,,,,,2026-02-14 04:56:18.611562,2026-02-14 04:56:18.611567
+8,14,Customer A,,,274,Retail,,,,,,,,,,False,,,,,,,False,,,,,,,True,,,,,,,,,,2025-12-14 15:14:50.540614,2026-02-14 04:56:53.857644
+13,14,Josh,,985555555,731,,,,,,,,,ktm,,True,,ktm,985555555,,,,False,,,,,,,True,,,,,,,12.0,,,2026-02-24 05:25:50.447231,2026-02-26 09:07:14.649360
+14,14,Naresh Sah,,9851220665,732,,,,,,,,,"Kathmandu
+Kathmandu",,True,,"Kathmandu
+Kathmandu",9851220665,,,,False,,,,,,,True,,,,,,,12.0,,,2026-02-24 05:30:21.921261,2026-02-26 09:07:14.654716
+15,14,rabi,rabi@gmail.com,985100000,733,,,,,,,,,jnk,,True,,jnk,985100000,,,,False,,,,,,,True,,,,,,,12.0,,,2026-02-24 10:51:00.387763,2026-02-26 09:07:14.660093

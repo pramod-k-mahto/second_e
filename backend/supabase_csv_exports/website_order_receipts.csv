@@ -1,0 +1,1 @@
+id,company_id,idempotency_key,request_hash,external_reference,sales_order_id,receipt_voucher_id,response_json,created_at,transaction_id,payment_screenshot

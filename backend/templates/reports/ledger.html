@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ledger Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 12px; }
+        h1, h2, h3 { margin: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #000; padding: 4px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .right { text-align: right; }
+        .small { font-size: 10px; }
+    </style>
+</head>
+<body>
+    <h2>{{ company.name }}</h2>
+    {% if company.address %}<div class="small">{{ company.address }}</div>{% endif %}
+    <h3>Ledger Report</h3>
+    <div class="small">
+        Ledger: {{ report.ledger_name }}<br />
+        {% if from_date %}From {{ from_date }}{% endif %}{% if to_date %} To {{ to_date }}{% endif %}<br />
+        Print Date: {{ print_date }}
+        {% if user and user.full_name %}<br />Print by: {{ user.full_name }}{% endif %}
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Voucher No</th>
+                <th>Type</th>
+                <th>Payment Mode</th>
+                <th>Narration</th>
+                <th class="right">Debit</th>
+                <th class="right">Credit</th>
+                <th class="right">Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="6"><strong>Opening Balance ({{ report.opening_balance_type }})</strong></td>
+                <td class="right">{{ '%.2f'|format(report.opening_balance) }}</td>
+            </tr>
+        {% for t in report.transactions %}
+            <tr>
+                <td>{{ t.date }}</td>
+                <td>{{ t.voucher_number }}</td>
+                <td>{{ t.voucher_type }}</td>
+                <td>{{ t.payment_mode }}</td>
+                <td>{{ t.narration }}</td>
+                <td class="right">{{ '%.2f'|format(t.debit) }}</td>
+                <td class="right">{{ '%.2f'|format(t.credit) }}</td>
+                <td class="right">{{ '%.2f'|format(t.balance) }} {{ t.balance_type }}</td>
+            </tr>
+        {% endfor %}
+            <tr>
+                <td colspan="6"><strong>Closing Balance ({{ report.closing_balance_type }})</strong></td>
+                <td class="right">{{ '%.2f'|format(report.closing_balance) }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

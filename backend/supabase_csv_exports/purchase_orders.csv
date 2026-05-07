@@ -1,0 +1,2 @@
+id,company_id,supplier_id,date,reference,status,converted_to_bill_id,created_at,updated_at
+1,6,5,2025-12-02,puou,CONVERTED,,2025-12-02 12:05:08.705048+00:00,2025-12-12 03:18:14.203184+00:00

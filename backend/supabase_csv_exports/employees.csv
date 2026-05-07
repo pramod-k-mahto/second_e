@@ -1,0 +1,7 @@
+id,company_id,code,full_name,email,phone,department_id,project_id,join_date,end_date,payroll_mode,base_monthly_salary,base_daily_wage,base_hourly_rate,payable_ledger_id,is_active,created_at,updated_at,employee_type_id,user_id,segment_id,apply_tds,tds_percent,designation,grade,designation_id,grade_number,salary_mode,gender,marital_status,dob,pan
+1,6,001,Ram yadav,,,1.0,,2025-12-04,,MONTHLY,15000.0,,,82.0,True,2025-12-25 03:01:11.670537+00:00,2025-12-25 03:01:11.670711+00:00,,,,False,1.0,,,,,PRO_RATA,,,,
+3,14,emp06,Shyam Timilsina,,,2.0,,2026-02-01,,MONTHLY,15000.0,,,113.0,True,2026-04-21 00:06:55.547231+00:00,2026-04-22 04:25:04.730222+00:00,3.0,,,True,1.0,,,7.0,4.0,FIXED,,,,
+2,14,Emp03,Ram Yadav,abc@gmail.com,657575757,2.0,,2025-10-01,,MONTHLY,50000.0,,,113.0,True,2026-02-13 23:01:34.242022+00:00,2026-04-24 00:25:22.344589+00:00,3.0,,,True,1.0,,A1,1.0,2.0,FIXED,Male,Married,,
+6,14,EMP005,John Doe,john@example.com,9841234567,,,2023-01-01,,MONTHLY,3000.0,,,1120.0,True,2026-04-24 00:41:14.328617+00:00,2026-04-24 00:41:14.328622+00:00,,,,True,1.0,,A1,,3.0,PRO_RATA,Male,Married,1990-01-01,123456789
+4,14,EMP001,John Doe,john@example.com,9841234567,2.0,,2023-01-01,,MONTHLY,25000.0,,,1120.0,True,2026-04-24 00:38:07.608169+00:00,2026-04-24 01:00:48.043211+00:00,1.0,,,True,1.0,,A1,7.0,3.0,PRO_RATA,Male,Married,1990-01-01,123456789
+8,14,,Sohan,,,,,,,MONTHLY,,,,,True,2026-04-30 03:57:11.915612+00:00,2026-04-30 03:57:11.915618+00:00,,,,False,1.0,,,,,PRO_RATA,,,,

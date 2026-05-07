@@ -1,0 +1,3 @@
+external_ref,item_name,opening_stock,opening_rate,opening_date
+STK-001,Product A,10,100,2025-01-01
+STK-002,Product B,5,250,2025-01-01

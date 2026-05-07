@@ -1,0 +1,6 @@
+id,return_id,item_id,quantity,rate,discount,tax_rate,department_id,project_id,warehouse_id,segment_id,hs_code
+1,1,9,1.0,0.0,0.0,0.0,,,,,
+2,2,15,1.0,500.0,0.0,0.0,,,,,
+3,3,15,1.0,500.0,0.0,0.0,,,,,
+5,5,15,3.0,0.0,0.0,0.0,,,,,
+6,6,15,1.0,500.0,0.0,0.0,,,,,

@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres:15
+    container_name: erp_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: account_system
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - fullStack
+    ports:
+      - "5433:5432"
+  backend:
+    build: ./backend
+    container_name: erp_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:admin@db:5432/account_system
+    depends_on:
+      - db
+    networks:
+      - fullStack
+
+  frontend:
+    build: ./Accounting-System-SAAS-frontend
+    container_name: erp_frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - fullStack
+
+networks:
+  fullStack:
+    driver: bridge
+
+volumes:
+  pgdata:

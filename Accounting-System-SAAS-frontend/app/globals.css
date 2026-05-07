@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "nepali-datepicker-reactjs/dist/index.css";
+
+/* ── Nepali Datepicker: calendar popup always visible above overflow-hidden parents ── */
+
+/* The library uses "calender" (typo). Override position to fixed so it
+   escapes any ancestor with overflow:hidden or a clipping stacking context. */
+.calender {
+  position: absolute !important;
+  z-index: 100000 !important;
+  width: 300px !important;
+  min-width: 300px !important;
+  background-color: white !important;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 10px !important;
+  border-radius: 8px !important;
+}
+
+.calender table {
+  width: 100% !important;
+  border-spacing: 1px !important;
+  table-layout: fixed !important;
+}
+
+.calender th,
+.calender td {
+  padding: 4px 1px !important;
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+.nepali-date-picker.align-right .calender {
+  transform: translateX(-100%) translateX(32px) !important;
+}
+
+/* Ensure the input text is always visible regardless of inherited color */
+.nepali-datepicker input,
+.nepali-date-picker input {
+  color: #1e293b !important;
+  /* slate-800 */
+  background-color: #ffffff !important;
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   PRINT STYLES  –  applied whenever window.print() is called
+   ───────────────────────────────────────────────────────────── */
+@page {
+  size: A4 portrait;
+  margin: 14mm 12mm 16mm 12mm;
+}
+
+@media print {
+  /* ── Reset ── */
+  *, *::before, *::after { box-sizing: border-box !important; }
+
+  body {
+    background: #ffffff !important;
+    color: #1e293b !important;
+    font-family: 'Segoe UI', Arial, sans-serif !important;
+    font-size: 10.5px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ── Hide chrome ── */
+  aside,
+  nav,
+  header,
+  .no-print,
+  .print-hidden,
+  [data-print-hide],
+  button:not(.print-show),
+  input:not(.print-show),
+  select:not(.print-show) {
+    display: none !important;
+  }
+
+  /* ── Layout ── */
+  main, [role="main"], .report-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Print-only report header (inject via .print-header class) ── */
+  .print-header {
+    display: block !important;
+    border-bottom: 2px solid #6366f1;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+  .print-header h1 {
+    font-size: 16px !important;
+    font-weight: 700;
+    margin: 0 0 2px;
+    color: #1e293b;
+  }
+  .print-header .print-company {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6366f1;
+    margin: 0 0 1px;
+  }
+  .print-header .print-period {
+    font-size: 10px;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* ── Tables ── */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    font-size: 10px !important;
+    page-break-inside: auto !important;
+  }
+  thead { display: table-header-group !important; }
+  tfoot { display: table-footer-group !important; }
+  tr    { page-break-inside: avoid !important; }
+
+  th {
+    background: #f1f5f9 !important;
+    color: #374151 !important;
+    font-weight: 700 !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 5px 7px !important;
+    font-size: 9.5px !important;
+    white-space: nowrap !important;
+  }
+  td {
+    border: 1px solid #e2e8f0 !important;
+    padding: 4px 7px !important;
+    color: #1e293b !important;
+    vertical-align: top !important;
+  }
+  tr:nth-child(even) td { background: #f8fafc !important; }
+
+  tfoot td, tfoot th {
+    background: #f1f5f9 !important;
+    font-weight: 700 !important;
+    border-top: 2px solid #94a3b8 !important;
+  }
+
+  /* ── Hierarchy / group rows ── */
+  .print-group-row td  { background: #e8edf4 !important; font-weight: 700 !important; }
+  .print-total-row td  { background: #f1f5f9 !important; font-weight: 700 !important; border-top: 2px solid #6366f1 !important; }
+  .print-grand-total td { background: #6366f1 !important; color: #fff !important; font-weight: 700 !important; }
+
+  /* ── Tailwind overrides for print ── */
+  .shadow, .shadow-sm, .shadow-md, .shadow-lg { box-shadow: none !important; }
+  .rounded, .rounded-md, .rounded-lg, .rounded-xl { border-radius: 0 !important; }
+  [class*="bg-indigo"], [class*="bg-emerald"], [class*="bg-rose"],
+  [class*="bg-slate-8"], [class*="bg-slate-9"] { background: transparent !important; }
+
+  /* ── Page footer ── */
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 8.5px;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    padding: 4px 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

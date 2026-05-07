@@ -1,0 +1,1 @@
+id,company_id,customer_id,date,reference,source_invoice_id,created_at,updated_at,sales_return_ledger_id,output_tax_return_ledger_id,department_id,project_id,voucher_id,payment_ledger_id,segment_id

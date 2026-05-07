@@ -1,0 +1,1 @@
+id,company_id,employee_id,work_date,shift_id,first_in,last_out,worked_minutes,late_minutes,overtime_minutes,status,is_manual,manual_reason,created_at,updated_at

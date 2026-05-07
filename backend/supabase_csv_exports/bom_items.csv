@@ -1,0 +1,33 @@
+id,bom_id,component_product_id,quantity,unit,wastage_percent,remarks
+3,1,33,10.0,pcs,10.0,
+4,1,34,30.0,bora,0.0,
+5,2,33,0.5,pcs,0.0,
+6,3,33,0.5,pcs,0.0,
+9,15,17,35.0,PCS,1.5,Scenario component RM2
+10,14,17,35.0,PCS,1.5,Scenario component RM2
+11,12,17,35.0,PCS,1.5,Scenario component RM2
+12,11,17,35.0,PCS,1.5,Scenario component RM2
+13,9,17,35.0,PCS,1.5,Scenario component RM2
+14,16,5,35.0,PCS,1.5,Scenario component RM2
+15,13,5,35.0,PCS,1.5,Scenario component RM2
+16,10,5,35.0,PCS,1.5,Scenario component RM2
+17,8,5,35.0,PCS,1.5,Scenario component RM2
+18,7,5,35.0,PCS,1.5,Scenario component RM2
+19,15,16,55.0,PCS,2.25,Scenario component RM1
+20,14,16,55.0,PCS,2.25,Scenario component RM1
+21,12,16,55.0,PCS,2.25,Scenario component RM1
+22,11,16,55.0,PCS,2.25,Scenario component RM1
+23,9,16,55.0,PCS,2.25,Scenario component RM1
+24,16,3,55.0,PCS,2.25,Scenario component RM1
+25,13,3,55.0,PCS,2.25,Scenario component RM1
+26,10,3,55.0,PCS,2.25,Scenario component RM1
+27,8,3,55.0,PCS,2.25,Scenario component RM1
+28,7,3,55.0,PCS,2.25,Scenario component RM1
+77,6,17,45.0,PCS,1.25,Demo RM component 2
+78,5,5,45.0,PCS,1.25,Demo RM component 2
+79,6,16,60.0,PCS,2.5,Demo RM component 1
+80,5,3,60.0,PCS,2.5,Demo RM component 1
+81,4,33,10.0,pcs,10.0,
+82,4,34,30.0,bora,0.0,
+83,17,33,5.0,pcs,2.0,
+84,17,18,6.0,pcs,1.0,

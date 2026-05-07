@@ -1,0 +1,2 @@
+id,default_fiscal_year_start,default_fiscal_year_end,enable_multi_tenant,max_companies_per_user,ghost_tenant_id,ghost_company_id
+1,,,True,3,17,21

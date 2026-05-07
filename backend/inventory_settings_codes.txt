@@ -1,0 +1,19 @@
+settings.plan: My Plan
+settings.plans: Plans
+settings.menu_permissions: Menu Permissions
+settings.language: Language
+inventory.categories: Categories
+inventory.brands: Brands
+inventory.subcategories: Subcategories
+settings.currency: Currency
+settings.print: Print
+settings.prompte: Promote/Prompte
+settings.website_orders: Website Orders
+settings.website_integration: Website Integration
+settings.inventory_valuation: Inventory Valuation
+settings.users: Users & Roles
+inventory.items: Items
+inventory.warehouses: Warehouses
+inventory.stock_transfers: Stock Transfers
+settings.company: Company
+settings.calendar: Calendar

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Profit &amp; Loss</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 12px; }
+        h1, h2, h3 { margin: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #000; padding: 4px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .right { text-align: right; }
+        .small { font-size: 10px; }
+    </style>
+</head>
+<body>
+    <h2>{{ company.name }}</h2>
+    {% if company.address %}<div class="small">{{ company.address }}</div>{% endif %}
+    <h3>Profit &amp; Loss</h3>
+    <div class="small">
+        From {{ report.from_date }} To {{ report.to_date }}<br />
+        Print Date: {{ print_date }}
+        {% if user and user.full_name %}<br />Print by: {{ user.full_name }}{% endif %}
+    </div>
+
+    {% if report.rows %}
+    <table>
+        <thead>
+            <tr>
+                <th>Group</th>
+                <th>Type</th>
+                <th class="right">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% set total_income = 0 %}
+        {% set total_expense = 0 %}
+        {% for row in report.rows %}
+            {% if row.group_type == 'INCOME' %}
+                {% set total_income = total_income + row.amount %}
+            {% else %}
+                {% set total_expense = total_expense + row.amount %}
+            {% endif %}
+            <tr>
+                <td>{{ row.group_name }}</td>
+                <td>{{ row.group_type }}</td>
+                <td class="right">{{ '%.2f'|format(row.amount) }}</td>
+            </tr>
+        {% endfor %}
+        {% set gross_profit = report.gross_profit %}
+        {% set net_profit = report.net_profit %}
+        <tr>
+            <th colspan="2">Total Income</th>
+            <th class="right">{{ '%.2f'|format(total_income) }}</th>
+        </tr>
+        <tr>
+            <th colspan="2">Total Expense</th>
+            <th class="right">{{ '%.2f'|format(total_expense) }}</th>
+        </tr>
+        <tr>
+            <th colspan="2">{{ 'Gross Profit' if gross_profit >= 0 else 'Gross Loss' }}</th>
+            <th class="right">{{ '%.2f'|format(gross_profit | abs) }}</th>
+        </tr>
+        <tr>
+            <th colspan="2">{{ 'Net Profit' if net_profit >= 0 else 'Net Loss' }}</th>
+            <th class="right">{{ '%.2f'|format(net_profit | abs) }}</th>
+        </tr>
+        </tbody>
+    </table>
+    {% else %}
+        <p>No data for selected filters.</p>
+    {% endif %}
+</body>
+</html>

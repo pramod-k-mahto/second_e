@@ -1,0 +1,2475 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Simple Accounting API",
+        "description": "Accounting system backend by Naresh Sah",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/auth/register": {
+            "post": {
+                "tags": [
+                    "Authentication",
+                    "Authentication"
+                ],
+                "summary": "Register",
+                "operationId": "register_auth_register_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UserCreate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UserRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "Authentication",
+                    "Authentication"
+                ],
+                "summary": "Login",
+                "operationId": "login_auth_login_post",
+                "requestBody": {
+                    "content": {
+                        "application/x-www-form-urlencoded": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Body_login_auth_login_post"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Token"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/me": {
+            "get": {
+                "tags": [
+                    "Authentication",
+                    "Authentication"
+                ],
+                "summary": "Read Me",
+                "operationId": "read_me_auth_me_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/UserRead"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ]
+            }
+        },
+        "/companies/": {
+            "get": {
+                "tags": [
+                    "Companies",
+                    "companies"
+                ],
+                "summary": "List Companies",
+                "operationId": "list_companies_companies__get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/CompanyRead"
+                                    },
+                                    "type": "array",
+                                    "title": "Response List Companies Companies  Get"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Companies",
+                    "companies"
+                ],
+                "summary": "Create Company",
+                "operationId": "create_company_companies__post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CompanyCreate"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CompanyRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ]
+            }
+        },
+        "/companies/{company_id}": {
+            "get": {
+                "tags": [
+                    "Companies",
+                    "companies"
+                ],
+                "summary": "Get Company",
+                "operationId": "get_company_companies__company_id__get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CompanyRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Companies",
+                    "companies"
+                ],
+                "summary": "Update Company",
+                "operationId": "update_company_companies__company_id__put",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CompanyUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CompanyRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Companies",
+                    "companies"
+                ],
+                "summary": "Delete Company",
+                "operationId": "delete_company_companies__company_id__delete",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ledgers/companies/{company_id}/ledger-groups": {
+            "get": {
+                "tags": [
+                    "Ledgers",
+                    "ledgers"
+                ],
+                "summary": "List Ledger Groups",
+                "operationId": "list_ledger_groups_ledgers_companies__company_id__ledger_groups_get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/LedgerGroupRead"
+                                    },
+                                    "title": "Response List Ledger Groups Ledgers Companies  Company Id  Ledger Groups Get"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ledgers",
+                    "ledgers"
+                ],
+                "summary": "Create Ledger Group",
+                "operationId": "create_ledger_group_ledgers_companies__company_id__ledger_groups_post",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LedgerGroupCreate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LedgerGroupRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ledgers/companies/{company_id}/ledgers": {
+            "get": {
+                "tags": [
+                    "Ledgers",
+                    "ledgers"
+                ],
+                "summary": "List Ledgers",
+                "operationId": "list_ledgers_ledgers_companies__company_id__ledgers_get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/LedgerRead"
+                                    },
+                                    "title": "Response List Ledgers Ledgers Companies  Company Id  Ledgers Get"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Ledgers",
+                    "ledgers"
+                ],
+                "summary": "Create Ledger",
+                "operationId": "create_ledger_ledgers_companies__company_id__ledgers_post",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LedgerCreate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LedgerRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/ledgers/companies/{company_id}/ledgers/{ledger_id}": {
+            "get": {
+                "tags": [
+                    "Ledgers",
+                    "ledgers"
+                ],
+                "summary": "Get Ledger",
+                "operationId": "get_ledger_ledgers_companies__company_id__ledgers__ledger_id__get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "ledger_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Ledger Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LedgerRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Ledgers",
+                    "ledgers"
+                ],
+                "summary": "Update Ledger",
+                "operationId": "update_ledger_ledgers_companies__company_id__ledgers__ledger_id__put",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "ledger_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Ledger Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LedgerUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LedgerRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Ledgers",
+                    "ledgers"
+                ],
+                "summary": "Delete Ledger",
+                "operationId": "delete_ledger_ledgers_companies__company_id__ledgers__ledger_id__delete",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "ledger_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Ledger Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/vouchers/companies/{company_id}/vouchers": {
+            "get": {
+                "tags": [
+                    "Vouchers",
+                    "vouchers"
+                ],
+                "summary": "List Vouchers",
+                "operationId": "list_vouchers_vouchers_companies__company_id__vouchers_get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/VoucherRead"
+                                    },
+                                    "title": "Response List Vouchers Vouchers Companies  Company Id  Vouchers Get"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Vouchers",
+                    "vouchers"
+                ],
+                "summary": "Create Voucher",
+                "operationId": "create_voucher_vouchers_companies__company_id__vouchers_post",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/VoucherCreate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/VoucherRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/vouchers/companies/{company_id}/vouchers/{voucher_id}": {
+            "get": {
+                "tags": [
+                    "Vouchers",
+                    "vouchers"
+                ],
+                "summary": "Get Voucher",
+                "operationId": "get_voucher_vouchers_companies__company_id__vouchers__voucher_id__get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "voucher_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Voucher Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/VoucherRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Vouchers",
+                    "vouchers"
+                ],
+                "summary": "Update Voucher",
+                "operationId": "update_voucher_vouchers_companies__company_id__vouchers__voucher_id__put",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "voucher_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Voucher Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/VoucherUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/VoucherRead"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Vouchers",
+                    "vouchers"
+                ],
+                "summary": "Delete Voucher",
+                "operationId": "delete_voucher_vouchers_companies__company_id__vouchers__voucher_id__delete",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "voucher_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Voucher Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/reports/companies/{company_id}/reports/ledger": {
+            "get": {
+                "tags": [
+                    "Reports",
+                    "reports"
+                ],
+                "summary": "Ledger Report",
+                "operationId": "ledger_report_reports_companies__company_id__reports_ledger_get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "ledger_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Ledger Id"
+                        }
+                    },
+                    {
+                        "name": "from_date",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "From Date"
+                        }
+                    },
+                    {
+                        "name": "to_date",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "To Date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/LedgerReport"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/reports/companies/{company_id}/reports/trial-balance": {
+            "get": {
+                "tags": [
+                    "Reports",
+                    "reports"
+                ],
+                "summary": "Trial Balance",
+                "operationId": "trial_balance_reports_companies__company_id__reports_trial_balance_get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "as_on_date",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "As On Date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TrialBalanceReport"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/reports/companies/{company_id}/reports/profit-and-loss": {
+            "get": {
+                "tags": [
+                    "Reports",
+                    "reports"
+                ],
+                "summary": "Profit And Loss",
+                "operationId": "profit_and_loss_reports_companies__company_id__reports_profit_and_loss_get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "from_date",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "From Date"
+                        }
+                    },
+                    {
+                        "name": "to_date",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "To Date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProfitAndLossReport"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/reports/companies/{company_id}/reports/balance-sheet": {
+            "get": {
+                "tags": [
+                    "Reports",
+                    "reports"
+                ],
+                "summary": "Balance Sheet",
+                "operationId": "balance_sheet_reports_companies__company_id__reports_balance_sheet_get",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    },
+                    {
+                        "name": "as_on_date",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "As On Date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BalanceSheetReport"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/seed/companies/{company_id}/seed/default-chart": {
+            "post": {
+                "tags": [
+                    "Seed Data",
+                    "seed"
+                ],
+                "summary": "Seed Default Chart",
+                "description": "Seed a basic chart of accounts for the given company.\n\nCreates standard ledger groups and a few common ledgers under each.\nIf a group/ledger with the same name already exists for this company,\nit will be reused and not duplicated.",
+                "operationId": "seed_default_chart_seed_companies__company_id__seed_default_chart_post",
+                "security": [
+                    {
+                        "OAuth2PasswordBearer": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "name": "company_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "title": "Company Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/": {
+            "get": {
+                "tags": [
+                    "Health"
+                ],
+                "summary": "Root",
+                "operationId": "root__get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "BalanceSheetReport": {
+                "properties": {
+                    "as_on_date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "As On Date"
+                    },
+                    "rows": {
+                        "items": {
+                            "$ref": "#/components/schemas/BalanceSheetRow"
+                        },
+                        "type": "array",
+                        "title": "Rows"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "as_on_date",
+                    "rows"
+                ],
+                "title": "BalanceSheetReport"
+            },
+            "BalanceSheetRow": {
+                "properties": {
+                    "group_name": {
+                        "type": "string",
+                        "title": "Group Name"
+                    },
+                    "amount": {
+                        "type": "number",
+                        "title": "Amount"
+                    },
+                    "group_type": {
+                        "$ref": "#/components/schemas/LedgerGroupType"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "group_name",
+                    "amount",
+                    "group_type"
+                ],
+                "title": "BalanceSheetRow"
+            },
+            "Body_login_auth_login_post": {
+                "properties": {
+                    "grant_type": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "pattern": "^password$"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Grant Type"
+                    },
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    },
+                    "password": {
+                        "type": "string",
+                        "format": "password",
+                        "title": "Password"
+                    },
+                    "scope": {
+                        "type": "string",
+                        "title": "Scope",
+                        "default": ""
+                    },
+                    "client_id": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Client Id"
+                    },
+                    "client_secret": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "format": "password",
+                        "title": "Client Secret"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username",
+                    "password"
+                ],
+                "title": "Body_login_auth_login_post"
+            },
+            "CompanyCreate": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "fiscal_year_start": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Fiscal Year Start"
+                    },
+                    "fiscal_year_end": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Fiscal Year End"
+                    },
+                    "address": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Address"
+                    },
+                    "phone": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Phone"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ],
+                "title": "CompanyCreate"
+            },
+            "CompanyRead": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "fiscal_year_start": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Fiscal Year Start"
+                    },
+                    "fiscal_year_end": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Fiscal Year End"
+                    },
+                    "address": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Address"
+                    },
+                    "phone": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Phone"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "title": "Id"
+                    },
+                    "owner_id": {
+                        "type": "integer",
+                        "title": "Owner Id"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "id",
+                    "owner_id"
+                ],
+                "title": "CompanyRead"
+            },
+            "CompanyUpdate": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "fiscal_year_start": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Fiscal Year Start"
+                    },
+                    "fiscal_year_end": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Fiscal Year End"
+                    },
+                    "address": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Address"
+                    },
+                    "phone": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Phone"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ],
+                "title": "CompanyUpdate"
+            },
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "LedgerCreate": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "group_id": {
+                        "type": "integer",
+                        "title": "Group Id"
+                    },
+                    "code": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Code"
+                    },
+                    "opening_balance": {
+                        "type": "number",
+                        "title": "Opening Balance",
+                        "default": 0
+                    },
+                    "opening_balance_type": {
+                        "$ref": "#/components/schemas/OpeningBalanceType",
+                        "default": "DEBIT"
+                    },
+                    "is_active": {
+                        "type": "boolean",
+                        "title": "Is Active",
+                        "default": true
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "group_id"
+                ],
+                "title": "LedgerCreate"
+            },
+            "LedgerGroupCreate": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "group_type": {
+                        "$ref": "#/components/schemas/LedgerGroupType"
+                    },
+                    "parent_group_id": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Parent Group Id"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "group_type"
+                ],
+                "title": "LedgerGroupCreate"
+            },
+            "LedgerGroupRead": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "group_type": {
+                        "$ref": "#/components/schemas/LedgerGroupType"
+                    },
+                    "parent_group_id": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Parent Group Id"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "title": "Id"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "group_type",
+                    "id"
+                ],
+                "title": "LedgerGroupRead"
+            },
+            "LedgerGroupType": {
+                "type": "string",
+                "enum": [
+                    "ASSET",
+                    "LIABILITY",
+                    "INCOME",
+                    "EXPENSE"
+                ],
+                "title": "LedgerGroupType"
+            },
+            "LedgerRead": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "group_id": {
+                        "type": "integer",
+                        "title": "Group Id"
+                    },
+                    "code": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Code"
+                    },
+                    "opening_balance": {
+                        "type": "number",
+                        "title": "Opening Balance",
+                        "default": 0
+                    },
+                    "opening_balance_type": {
+                        "$ref": "#/components/schemas/OpeningBalanceType",
+                        "default": "DEBIT"
+                    },
+                    "is_active": {
+                        "type": "boolean",
+                        "title": "Is Active",
+                        "default": true
+                    },
+                    "id": {
+                        "type": "integer",
+                        "title": "Id"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "group_id",
+                    "id"
+                ],
+                "title": "LedgerRead"
+            },
+            "LedgerReport": {
+                "properties": {
+                    "ledger_id": {
+                        "type": "integer",
+                        "title": "Ledger Id"
+                    },
+                    "ledger_name": {
+                        "type": "string",
+                        "title": "Ledger Name"
+                    },
+                    "opening_balance": {
+                        "type": "number",
+                        "title": "Opening Balance"
+                    },
+                    "opening_balance_type": {
+                        "$ref": "#/components/schemas/OpeningBalanceType"
+                    },
+                    "transactions": {
+                        "items": {
+                            "$ref": "#/components/schemas/LedgerTransaction"
+                        },
+                        "type": "array",
+                        "title": "Transactions"
+                    },
+                    "closing_balance": {
+                        "type": "number",
+                        "title": "Closing Balance"
+                    },
+                    "closing_balance_type": {
+                        "$ref": "#/components/schemas/OpeningBalanceType"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "ledger_id",
+                    "ledger_name",
+                    "opening_balance",
+                    "opening_balance_type",
+                    "transactions",
+                    "closing_balance",
+                    "closing_balance_type"
+                ],
+                "title": "LedgerReport"
+            },
+            "LedgerTransaction": {
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Date"
+                    },
+                    "voucher_id": {
+                        "type": "integer",
+                        "title": "Voucher Id"
+                    },
+                    "voucher_type": {
+                        "$ref": "#/components/schemas/VoucherType"
+                    },
+                    "voucher_number": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Voucher Number"
+                    },
+                    "narration": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Narration"
+                    },
+                    "debit": {
+                        "type": "number",
+                        "title": "Debit"
+                    },
+                    "credit": {
+                        "type": "number",
+                        "title": "Credit"
+                    },
+                    "balance": {
+                        "type": "number",
+                        "title": "Balance"
+                    },
+                    "balance_type": {
+                        "$ref": "#/components/schemas/OpeningBalanceType"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "date",
+                    "voucher_id",
+                    "voucher_type",
+                    "voucher_number",
+                    "narration",
+                    "debit",
+                    "credit",
+                    "balance",
+                    "balance_type"
+                ],
+                "title": "LedgerTransaction"
+            },
+            "LedgerUpdate": {
+                "properties": {
+                    "name": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Name"
+                    },
+                    "group_id": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Group Id"
+                    },
+                    "code": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Code"
+                    },
+                    "opening_balance": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Opening Balance"
+                    },
+                    "opening_balance_type": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/components/schemas/OpeningBalanceType"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
+                    },
+                    "is_active": {
+                        "anyOf": [
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Is Active"
+                    }
+                },
+                "type": "object",
+                "title": "LedgerUpdate"
+            },
+            "OpeningBalanceType": {
+                "type": "string",
+                "enum": [
+                    "DEBIT",
+                    "CREDIT"
+                ],
+                "title": "OpeningBalanceType"
+            },
+            "ProfitAndLossReport": {
+                "properties": {
+                    "from_date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "From Date"
+                    },
+                    "to_date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "To Date"
+                    },
+                    "rows": {
+                        "items": {
+                            "$ref": "#/components/schemas/ProfitAndLossRow"
+                        },
+                        "type": "array",
+                        "title": "Rows"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "from_date",
+                    "to_date",
+                    "rows"
+                ],
+                "title": "ProfitAndLossReport"
+            },
+            "ProfitAndLossRow": {
+                "properties": {
+                    "group_name": {
+                        "type": "string",
+                        "title": "Group Name"
+                    },
+                    "amount": {
+                        "type": "number",
+                        "title": "Amount"
+                    },
+                    "group_type": {
+                        "$ref": "#/components/schemas/LedgerGroupType"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "group_name",
+                    "amount",
+                    "group_type"
+                ],
+                "title": "ProfitAndLossRow"
+            },
+            "Token": {
+                "properties": {
+                    "access_token": {
+                        "type": "string",
+                        "title": "Access Token"
+                    },
+                    "token_type": {
+                        "type": "string",
+                        "title": "Token Type",
+                        "default": "bearer"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "access_token"
+                ],
+                "title": "Token"
+            },
+            "TrialBalanceReport": {
+                "properties": {
+                    "as_on_date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "As On Date"
+                    },
+                    "rows": {
+                        "items": {
+                            "$ref": "#/components/schemas/TrialBalanceRow"
+                        },
+                        "type": "array",
+                        "title": "Rows"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "as_on_date",
+                    "rows"
+                ],
+                "title": "TrialBalanceReport"
+            },
+            "TrialBalanceRow": {
+                "properties": {
+                    "ledger_id": {
+                        "type": "integer",
+                        "title": "Ledger Id"
+                    },
+                    "ledger_name": {
+                        "type": "string",
+                        "title": "Ledger Name"
+                    },
+                    "debit": {
+                        "type": "number",
+                        "title": "Debit"
+                    },
+                    "credit": {
+                        "type": "number",
+                        "title": "Credit"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "ledger_id",
+                    "ledger_name",
+                    "debit",
+                    "credit"
+                ],
+                "title": "TrialBalanceRow"
+            },
+            "UserCreate": {
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "title": "Email"
+                    },
+                    "full_name": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Full Name"
+                    },
+                    "password": {
+                        "type": "string",
+                        "title": "Password"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "email",
+                    "password"
+                ],
+                "title": "UserCreate"
+            },
+            "UserRead": {
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "title": "Email"
+                    },
+                    "full_name": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Full Name"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "title": "Id"
+                    },
+                    "is_active": {
+                        "type": "boolean",
+                        "title": "Is Active"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Created At"
+                    },
+                    "role": {
+                        "type": "string",
+                        "title": "Role"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "email",
+                    "id",
+                    "is_active",
+                    "created_at",
+                    "role"
+                ],
+                "title": "UserRead"
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            },
+            "VoucherCreate": {
+                "properties": {
+                    "voucher_date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Voucher Date"
+                    },
+                    "voucher_type": {
+                        "$ref": "#/components/schemas/VoucherType"
+                    },
+                    "voucher_number": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Voucher Number"
+                    },
+                    "narration": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Narration"
+                    },
+                    "lines": {
+                        "items": {
+                            "$ref": "#/components/schemas/VoucherLineCreate"
+                        },
+                        "type": "array",
+                        "title": "Lines"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "voucher_date",
+                    "voucher_type",
+                    "lines"
+                ],
+                "title": "VoucherCreate"
+            },
+            "VoucherLineCreate": {
+                "properties": {
+                    "ledger_id": {
+                        "type": "integer",
+                        "title": "Ledger Id"
+                    },
+                    "debit": {
+                        "type": "number",
+                        "title": "Debit",
+                        "default": 0
+                    },
+                    "credit": {
+                        "type": "number",
+                        "title": "Credit",
+                        "default": 0
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "ledger_id"
+                ],
+                "title": "VoucherLineCreate"
+            },
+            "VoucherLineRead": {
+                "properties": {
+                    "ledger_id": {
+                        "type": "integer",
+                        "title": "Ledger Id"
+                    },
+                    "debit": {
+                        "type": "number",
+                        "title": "Debit",
+                        "default": 0
+                    },
+                    "credit": {
+                        "type": "number",
+                        "title": "Credit",
+                        "default": 0
+                    },
+                    "id": {
+                        "type": "integer",
+                        "title": "Id"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "ledger_id",
+                    "id"
+                ],
+                "title": "VoucherLineRead"
+            },
+            "VoucherRead": {
+                "properties": {
+                    "voucher_date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Voucher Date"
+                    },
+                    "voucher_type": {
+                        "$ref": "#/components/schemas/VoucherType"
+                    },
+                    "voucher_number": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Voucher Number"
+                    },
+                    "narration": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Narration"
+                    },
+                    "id": {
+                        "type": "integer",
+                        "title": "Id"
+                    },
+                    "company_id": {
+                        "type": "integer",
+                        "title": "Company Id"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Created At"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Updated At"
+                    },
+                    "lines": {
+                        "items": {
+                            "$ref": "#/components/schemas/VoucherLineRead"
+                        },
+                        "type": "array",
+                        "title": "Lines",
+                        "default": []
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "voucher_date",
+                    "voucher_type",
+                    "id",
+                    "company_id",
+                    "created_at",
+                    "updated_at"
+                ],
+                "title": "VoucherRead"
+            },
+            "VoucherType": {
+                "type": "string",
+                "enum": [
+                    "PAYMENT",
+                    "RECEIPT",
+                    "CONTRA",
+                    "JOURNAL"
+                ],
+                "title": "VoucherType"
+            },
+            "VoucherUpdate": {
+                "properties": {
+                    "voucher_date": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Voucher Date"
+                    },
+                    "voucher_type": {
+                        "$ref": "#/components/schemas/VoucherType"
+                    },
+                    "voucher_number": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Voucher Number"
+                    },
+                    "narration": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Narration"
+                    },
+                    "lines": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "$ref": "#/components/schemas/VoucherLineCreate"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Lines"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "voucher_date",
+                    "voucher_type"
+                ],
+                "title": "VoucherUpdate"
+            }
+        },
+        "securitySchemes": {
+            "OAuth2PasswordBearer": {
+                "type": "oauth2",
+                "flows": {
+                    "password": {
+                        "scopes": {},
+                        "tokenUrl": "/auth/login"
+                    }
+                }
+            }
+        }
+    }
+}

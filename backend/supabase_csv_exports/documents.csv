@@ -1,0 +1,5 @@
+id,company_id,file_url,file_type,status,extracted_data,created_at,document_kind,original_filename,content_type,size_bytes,uploaded_by,confirmed_at,updated_at
+1,14,/uploads/tenants/12/companies/14/documents/cfb2f37b717ea6ef57012f94686d5a9c.jpeg,image,failed,,2026-04-15 04:55:26.057149+00:00,,WhatsApp Image 2026-04-08 at 17.45.52.jpeg,image/jpeg,92265,9,,2026-04-15 04:58:42.572858+00:00
+2,14,/uploads/tenants/12/companies/14/documents/b9f643f2a7cc350dca48e7b38e1f1136.pdf,pdf,uploaded,,2026-04-15 06:17:36.449791+00:00,,Priya Kumar Sah-00075826-82_83 (1).pdf,application/pdf,293248,9,,2026-04-15 06:17:36.449804+00:00
+3,14,/uploads/tenants/12/companies/14/documents/fc2bb36cc828b3a2b8b7cc31e06200cc.jpeg,image,failed,,2026-04-15 08:22:31.912264+00:00,,WhatsApp Image 2025-10-07 at 12.00.29.jpeg,image/jpeg,63118,9,,2026-04-15 08:22:42.896216+00:00
+4,14,/uploads/tenants/12/companies/14/documents/7d729533b83e904c21433444233c2bd4.jpeg,image,failed,,2026-04-23 08:52:45.756141+00:00,,WhatsApp Image 2026-04-08 at 17.45.52.jpeg,image/jpeg,92265,9,,2026-04-23 08:53:06.850014+00:00

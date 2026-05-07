@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Balance Sheet</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 12px; }
+        h1, h2, h3 { margin: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #000; padding: 4px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .right { text-align: right; }
+        .small { font-size: 10px; }
+    </style>
+</head>
+<body>
+    <h2>{{ company.name }}</h2>
+    {% if company.address %}<div class="small">{{ company.address }}</div>{% endif %}
+    <h3>Balance Sheet</h3>
+    <div class="small">
+        As On: {{ report.as_on_date }}<br />
+        Print Date: {{ print_date }}
+        {% if user and user.full_name %}<br />Print by: {{ user.full_name }}{% endif %}
+    </div>
+
+    {% if report.rows %}
+    <table>
+        <thead>
+            <tr>
+                <th>Group</th>
+                <th>Type</th>
+                <th class="right">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% set total_assets = 0 %}
+        {% set total_liabilities = 0 %}
+        {% for row in report.rows %}
+            {% if row.group_type == 'ASSET' %}
+                {% set total_assets = total_assets + row.amount %}
+            {% else %}
+                {% set total_liabilities = total_liabilities + row.amount %}
+            {% endif %}
+            <tr>
+                <td>{{ row.group_name }}</td>
+                <td>{{ row.group_type }}</td>
+                <td class="right">{{ '%.2f'|format(row.amount) }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <th colspan="2">Total Assets</th>
+            <th class="right">{{ '%.2f'|format(total_assets) }}</th>
+        </tr>
+        <tr>
+            <th colspan="2">Total Liabilities</th>
+            <th class="right">{{ '%.2f'|format(total_liabilities) }}</th>
+        </tr>
+        </tbody>
+    </table>
+    {% else %}
+        <p>No data for selected filters.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,4 @@
+external_ref,order_id,order_date,customer,item,qty,rate,discount,tax_rate
+SHP-1001,1001,2025-01-05,John Doe,T-Shirt,2,500,0,0
+SHP-1001,1001,2025-01-05,John Doe,Cap,1,250,0,0
+SHP-1002,1002,2025-01-06,Jane Roe,T-Shirt,1,500,0,0

@@ -1,0 +1,110 @@
+code,label,module,parent_code,sort_order
+DASHBOARD,Dashboard,General,,10
+COMPANIES,Companies,Setup,,20
+USERS,Users,Setup,,30
+SALES,Sales,Sales,,40
+sales.invoice.list,Sales Invoices,Sales,SALES,41
+sales.return.list,Sales Returns,Sales,SALES,42
+sales.order.list,Sales Orders,Sales,SALES,43
+POS,POS,POS,,45
+pos.billing,POS Billing,POS,POS,46
+sales.restaurant_pos,Restaurant POS,POS,POS,47
+pos.tables,Table Management,POS,POS,48
+PURCHASES,Purchases,Purchases,,50
+purchases.bill.list,Purchase Invoices,Purchases,PURCHASES,51
+purchases.return.list,Purchase Returns,Purchases,PURCHASES,52
+purchases.order.list,Purchase Orders,Purchases,PURCHASES,53
+INVENTORY,Inventory,Inventory,,60
+inventory.items,Items,Inventory,INVENTORY,61
+inventory.categories,Categories,Inventory,INVENTORY,62
+inventory.subcategories,Subcategories,Inventory,INVENTORY,63
+inventory.brands,Brands,Inventory,INVENTORY,64
+inventory.warehouses,Warehouses,Inventory,INVENTORY,65
+inventory.stock_transfers,Stock Transfers,Inventory,INVENTORY,66
+TASKS,Tasks,Tasks,,70
+tasks.list,Task Board,Tasks,TASKS,71
+tasks.heads,Task Heads,Tasks,TASKS,72
+tasks.performance_report,Performance Report,Tasks,TASKS,73
+PAYROLL,Payroll,Payroll,,80
+payroll.dashboard,Payroll Dashboard,Payroll,PAYROLL,81
+payroll.employees,Employees,Payroll,PAYROLL,82
+payroll.payheads,Payheads,Payroll,PAYROLL,83
+payroll.shifts,Shifts,Payroll,PAYROLL,84
+payroll.shift_assignments,Assignments,Payroll,PAYROLL,85
+payroll.devices,Biometric Devices,Payroll,PAYROLL,86
+payroll.attendance,Attendance,Payroll,PAYROLL,87
+payroll.leave,Leave Management,Payroll,PAYROLL,88
+payroll.runs,Payroll Runs,Payroll,PAYROLL,89
+payroll.cost_centers,Cost Centers,Payroll,PAYROLL,90
+payroll.commission_rules,Commission Rules,Payroll,PAYROLL,91
+payroll.commission_report,Commission Report,Payroll,PAYROLL,92
+accounting.masters,Master,Accounting,,100
+accounting.masters.ledgers,Ledgers,Accounting,accounting.masters,101
+accounting.masters.sales_target,Sales Target Setup,Accounting,accounting.masters,105
+accounting.masters.payment-modes,Payment Modes,Accounting,accounting.masters,106
+INVENTORY_STOCK_SUMMARY,Stock Summary,Reports,,200
+REPORTS,Reports,Reports,,210
+REPORTS_SALES,Sales Reports,Reports,REPORTS,211
+REPORTS_PURCHASES,Purchase Reports,Reports,REPORTS,212
+reports.quick_analysis,Quick Analysis report,Reports,REPORTS,205
+reports.stock,Stock Status & Alerts,Reports,REPORTS,206
+reports.ledger,Ledger Report,Reports,REPORTS,213
+reports.income_expense_summary,Income/Expense Summary,Reports,REPORTS,218
+reports.monthly_income_expense,Monthly Income & Expense,Reports,REPORTS,219
+reports.online_orders,Online Orders,Reports,REPORTS,220
+reports.mis_cash_flow,Cash Flow Report,Reports,REPORTS,221
+reports.mis_fund_management,Fund Management,Reports,REPORTS,222
+reports.revenue_analytics,Revenue Analytics,Dashboard Analytics,REPORTS,5
+reports.performance_insights,Performance Insights,Dashboard Analytics,REPORTS,6
+reports.mis_target_vs_actual,Target Vs Actual,Reports,REPORTS,223
+settings,Settings,Settings,,900
+settings.company,Company Profile,Settings,settings,901
+settings.calendar,Calendar Settings,Settings,settings,902
+settings.duty_taxes,Duties & Taxes,Settings,settings,903
+settings.language,Language,Settings,settings,904
+settings.users,Users & Roles,Settings,settings,905
+settings.plans,Plans,Settings,settings,906
+settings.menu_permissions,Menu Permissions,Settings,settings,907
+settings.currency,Currency Settings,Settings,settings,908
+settings.notifications,Notification Settings,Settings,settings,909
+settings.inventory_valuation,Inventory Valuation,Settings,settings,910
+settings.cost-centers,Cost Centers,Settings,settings,911
+settings.projects,Projects,Settings,settings,912
+DELIVERY,Delivery,Delivery,,75
+delivery.places_partners,Places & Partners,Delivery,DELIVERY,76
+delivery.packages,Packages & Dispatches,Delivery,DELIVERY,77
+PERFORMANCE,Performance,Performance,,85
+dashboard.total_sales,Total Sales Widget,Dashboard Analytics,DASHBOARD,1
+dashboard.total_purchase,Total Purchase Widget,Dashboard Analytics,DASHBOARD,2
+dashboard.sales_vs_margin,Sales vs Gross Margin,Dashboard Analytics,DASHBOARD,3
+dashboard.expenses,Expenses Widget,Dashboard Analytics,DASHBOARD,4
+dashboard.net_income,Net-Income Widget,Dashboard Analytics,DASHBOARD,5
+dashboard.receivables,Receivables Summary Widget,Dashboard Analytics,DASHBOARD,6
+dashboard.payables,Payables Summary Widget,Dashboard Analytics,DASHBOARD,7
+dashboard.balances,Balances (Cash/Bank) Widget,Dashboard Analytics,DASHBOARD,8
+dashboard.income_vs_expenses,Income vs Expenses Waterfall Chart,Dashboard Analytics,DASHBOARD,9
+dashboard.recent_activity,Recent Activity Table,Dashboard Analytics,DASHBOARD,10
+dashboard.top_parties,Top Customers/Suppliers Table,Dashboard Analytics,DASHBOARD,11
+dashboard.date_filters,Date Quick Filters & Pickers,Dashboard Analytics,DASHBOARD,12
+dashboard.master_panel,Master Panel Trigger 📂,Dashboard Analytics,DASHBOARD,13
+dashboard.export_actions,Export CSV Buttons,Dashboard Analytics,DASHBOARD,14
+header.notifications,General Notifications 🔔,System Shell,,201
+header.pending_orders,Pending Orders Counter 🔔,System Shell,,202
+header.calculator,Calculator Tool 🧮,System Shell,,203
+header.theme_toggle,Theme Toggle (Dark/Light) 🌗,System Shell,,203
+sidebar.nav.companies,Companies Link 🏢,System Shell,,204
+sidebar.nav.plans,Subscription/Plans Link 📦,System Shell,,205
+sidebar.nav.users,User Management Link 👤,System Shell,,206
+sidebar.nav.backup,Backup & Restore Tools 💾,System Shell,,207
+sidebar.nav.import,Import Tools 🔁,System Shell,,208
+performance.dashboard,Performance Dashboard,Performance,PERFORMANCE,86
+performance.rewards,Rewards,Performance,PERFORMANCE,87
+RESOURCES,Resources,Resources,,95
+resources.library,Library,Resources,RESOURCES,96
+communications.logs,Comm. Logs,Resources,RESOURCES,97
+reports.item_wise_profit,Item Wise Profit,Reports,REPORTS,207
+reports.item_history,Item History,Reports,REPORTS,209
+reports.bom_transactions,BOM transactions,Reports,REPORTS,210
+admin.announcements,System Broadcasts,System Shell,,211
+admin.platform_bookkeeping,Platform Bookkeeping,System Shell,,212
+admin.settings,Admin Settings,Platform,,213

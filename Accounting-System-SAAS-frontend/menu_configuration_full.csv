@@ -1,0 +1,102 @@
+code,label,module,parent_code,sort_order,is_active
+DASHBOARD,Dashboard,General,,10,true
+COMPANIES,Companies,Setup,,20,true
+USERS,Users,Setup,,30,true
+SALES,Sales,Sales,,40,true
+sales.invoice.list,Sales Invoices,Sales,SALES,41,true
+sales.return.list,Sales Returns,Sales,SALES,42,true
+sales.order.list,Sales Orders,Sales,SALES,43,true
+POS,POS,POS,,45,true
+pos.billing,POS Billing,POS,POS,46,true
+sales.restaurant_pos,Restaurant POS,POS,POS,47,true
+pos.tables,Table Management,POS,POS,48,true
+PURCHASES,Purchases,Purchases,,50,true
+purchases.bill.list,Purchase Invoices,Purchases,PURCHASES,51,true
+purchases.return.list,Purchase Returns,Purchases,PURCHASES,52,true
+purchases.order.list,Purchase Orders,Purchases,PURCHASES,53,true
+INVENTORY,Inventory,Inventory,,60,true
+inventory.items,Items,Inventory,INVENTORY,61,true
+inventory.categories,Categories,Inventory,INVENTORY,62,true
+inventory.subcategories,Subcategories,Inventory,INVENTORY,63,true
+inventory.brands,Brands,Inventory,INVENTORY,64,true
+inventory.warehouses,Warehouses,Inventory,INVENTORY,65,true
+inventory.stock_transfers,Stock Transfers,Inventory,INVENTORY,66,true
+TASKS,Tasks,Tasks,,70,true
+tasks.list,Task Board,Tasks,TASKS,71,true
+tasks.heads,Task Heads,Tasks,TASKS,72,true
+tasks.performance_report,Performance Report,Tasks,TASKS,73,true
+PAYROLL,Payroll,Payroll,,80,true
+payroll.dashboard,Payroll Dashboard,Payroll,PAYROLL,81,true
+payroll.employees,Employees,Payroll,PAYROLL,82,true
+payroll.payheads,Payheads,Payroll,PAYROLL,83,true
+payroll.shifts,Shifts,Payroll,PAYROLL,84,true
+payroll.shift_assignments,Assignments,Payroll,PAYROLL,85,true
+payroll.devices,Biometric Devices,Payroll,PAYROLL,86,true
+payroll.attendance,Attendance,Payroll,PAYROLL,87,true
+payroll.leave,Leave Management,Payroll,PAYROLL,88,true
+payroll.runs,Payroll Runs,Payroll,PAYROLL,89,true
+payroll.cost_centers,Cost Centers,Payroll,PAYROLL,90,true
+payroll.commission_rules,Commission Rules,Payroll,PAYROLL,91,true
+payroll.commission_report,Commission Report,Payroll,PAYROLL,92,true
+accounting.masters,Master,Accounting,,100,true
+accounting.masters.ledgers,Ledgers,Accounting,accounting.masters,101,true
+accounting.masters.sales_target,Sales Target Setup,Accounting,accounting.masters,105,true
+accounting.masters.payment-modes,Payment Modes,Accounting,accounting.masters,106,true
+INVENTORY_STOCK_SUMMARY,Stock Summary,Reports,,200,true
+REPORTS,Reports,Reports,,210,true
+REPORTS_SALES,Sales Reports,Reports,REPORTS,211,true
+REPORTS_PURCHASES,Purchase Reports,Reports,REPORTS,212,true
+reports.quick_analysis,Quick Analysis report,Reports,REPORTS,205,true
+reports.stock,Stock Status & Alerts,Reports,REPORTS,206,true
+reports.ledger,Ledger Report,Reports,REPORTS,213,true
+reports.income_expense_summary,Income/Expense Summary,Reports,REPORTS,218,true
+reports.monthly_income_expense,Monthly Income & Expense,Reports,REPORTS,219,true
+reports.online_orders,Online Orders,Reports,REPORTS,220,true
+reports.mis_cash_flow,Cash Flow Report,Reports,REPORTS,221,true
+reports.mis_fund_management,Fund Management,Reports,REPORTS,222,true
+reports.revenue_analytics,Revenue Analytics,Dashboard Analytics,REPORTS,5,true
+reports.performance_insights,Performance Insights,Dashboard Analytics,REPORTS,6,true
+reports.mis_target_vs_actual,Target Vs Actual,Reports,REPORTS,223,true
+settings,Settings,Settings,,900,true
+settings.company,Company Profile,Settings,settings,901,true
+settings.calendar,Calendar Settings,Settings,settings,902,true
+settings.duty_taxes,Duties & Taxes,Settings,settings,903,true
+settings.language,Language,Settings,settings,904,true
+settings.users,Users & Roles,Settings,settings,905,true
+settings.plans,Plans,Settings,settings,906,true
+settings.menu_permissions,Menu Permissions,Settings,settings,907,true
+DELIVERY,Delivery,Delivery,,75,true
+delivery.places_partners,Places & Partners,Delivery,DELIVERY,76,true
+delivery.packages,Packages & Dispatches,Delivery,DELIVERY,77,true
+PERFORMANCE,Performance,Performance,,85,true
+dashboard.total_sales,Total Sales Widget,Dashboard Analytics,DASHBOARD,1,true
+dashboard.total_purchase,Total Purchase Widget,Dashboard Analytics,DASHBOARD,2,true
+dashboard.sales_vs_margin,Sales vs Gross Margin,Dashboard Analytics,DASHBOARD,3,true
+dashboard.expenses,Expenses Widget,Dashboard Analytics,DASHBOARD,4,true
+dashboard.net_income,Net-Income Widget,Dashboard Analytics,DASHBOARD,5,true
+dashboard.receivables,Receivables Summary Widget,Dashboard Analytics,DASHBOARD,6,true
+dashboard.payables,Payables Summary Widget,Dashboard Analytics,DASHBOARD,7,true
+dashboard.balances,Balances (Cash/Bank) Widget,Dashboard Analytics,DASHBOARD,8,true
+dashboard.income_vs_expenses,Income vs Expenses Waterfall Chart,Dashboard Analytics,DASHBOARD,9,true
+dashboard.recent_activity,Recent Activity Table,Dashboard Analytics,DASHBOARD,10,true
+dashboard.top_parties,Top Customers/Suppliers Table,Dashboard Analytics,DASHBOARD,11,true
+dashboard.date_filters,Date Quick Filters & Pickers,Dashboard Analytics,DASHBOARD,12,true
+dashboard.master_panel,Master Panel Trigger 📂,Dashboard Analytics,DASHBOARD,13,true
+dashboard.export_actions,Export CSV Buttons,Dashboard Analytics,DASHBOARD,14,true
+header.notifications,General Notifications 🔔,System Shell,,201,true
+header.pending_orders,Pending Orders Counter 🔔,System Shell,,202,true
+header.calculator,Calculator Tool 🧮,System Shell,,203,true
+header.theme_toggle,Theme Toggle (Dark/Light) 🌗,System Shell,,203,true
+sidebar.nav.companies,Companies Link 🏢,System Shell,,204,true
+sidebar.nav.plans,Subscription/Plans Link 📦,System Shell,,205,true
+sidebar.nav.users,User Management Link 👤,System Shell,,206,true
+sidebar.nav.backup,Backup & Restore Tools 💾,System Shell,,207,true
+sidebar.nav.import,Import Tools 🔁,System Shell,,208,true
+performance.dashboard,Performance Dashboard,Performance,PERFORMANCE,86,true
+performance.rewards,Rewards,Performance,PERFORMANCE,87,true
+RESOURCES,Resources,Resources,,95,true
+resources.library,Library,Resources,RESOURCES,96,true
+communications.logs,Comm. Logs,Resources,RESOURCES,97,true
+reports.item_wise_profit,Item Wise Profit,Reports,REPORTS,207,true
+reports.item_history,Item History,Reports,REPORTS,209,true
+reports.bom_transactions,BOM transactions,Reports,REPORTS,210,true

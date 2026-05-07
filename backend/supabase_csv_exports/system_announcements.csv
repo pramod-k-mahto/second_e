@@ -1,0 +1,2 @@
+id,message_type,content,start_date,end_date,is_active,target_tenant_ids,created_at
+1,text,Test Message,,,True,,2026-04-03 21:50:50.915789+00:00

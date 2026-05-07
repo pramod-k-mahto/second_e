@@ -1,0 +1,4 @@
+id,company_id,name,code,description,is_active,created_at,updated_at
+1,14,Sales Person,SP,,True,2026-02-13 22:59:02.521439+00:00,2026-02-13 22:59:02.521444+00:00
+2,14,Delivery Person,EMP-Del,,True,2026-04-21 00:05:27.551751+00:00,2026-04-21 00:05:27.551781+00:00
+3,14,Full Time,,,True,2026-04-21 19:46:27.908979+00:00,2026-04-21 19:46:27.908994+00:00

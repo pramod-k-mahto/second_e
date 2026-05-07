@@ -1,0 +1,4 @@
+ID: 13, Code: inventory.categories, Label: Categories
+ID: 14, Code: inventory.brands, Label: Brands
+ID: 50, Code: inventory.subcategories, Label: Subcategories
+ID: 52, Code: settings.company, Label: Company

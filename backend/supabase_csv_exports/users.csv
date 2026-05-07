@@ -1,0 +1,35 @@
+id,email,full_name,password_hash,is_active,created_at,updated_at,role,tenant_id,is_tenant_admin,tenant_permissions,is_system_admin
+3,green@gmail.com,Green Land,$2b$12$vdxt29FPFmPYgUKWVVlm0.1tUly5ZkDhcBN/AuxlOawYIx0VO3BqG,True,2025-11-18 11:02:48.500580+00:00,2025-11-18 11:02:48.500584+00:00,user,,False,,False
+6,priyanshi@gmail.com,priyanshi,$2b$12$ryB62Pi0b.7TEooW03JmgeBNpXweM8Y9rNiaaYGKolBpaKRHPD2J.,True,2025-11-18 12:44:45.295432+00:00,2025-11-18 12:44:45.295440+00:00,user,,False,,False
+1,admin@gmail.com,Admin,$2b$12$.diUmJiZde/z99SfbMALwuKaqMVlTV/uDd78IVB44UN0ygSUS4Gci,True,2025-11-17 07:09:42.591611+00:00,2025-11-17 07:09:42.591617+00:00,user,,False,,False
+25,test_user_f94f@example.com,,pw,True,2026-03-29 00:32:48.823582+00:00,2026-03-29 00:32:48.823587+00:00,user,1.0,False,,True
+11,manisha2@gmail.com,Manisha2,$2b$12$VBOQozaFZjljgD/kKjNYVuodPwHHFK8HRu5aF2IdVDFI4gwVmWXii,True,2025-11-23 06:29:05.230319+00:00,2025-11-23 06:29:05.249930+00:00,user,14.0,False,,False
+12,manisha3@gmail.com,manisha3,$2b$12$cgTGHBfGnJIGR6oxwv56du692YoCK2UwIPgtqlXogD/SxkhjvxqQK,True,2025-11-23 07:19:39.069414+00:00,2025-11-23 07:19:39.085809+00:00,user,15.0,False,,False
+13,manisha4@gmail.com,manisha4,$2b$12$l0e4U8dQJXuzszw2h9ylweN8O9NwJrlOopPOdfGpolttsnlFKMtJO,True,2025-11-23 07:33:10.372055+00:00,2025-11-23 07:33:10.385623+00:00,user,16.0,False,,False
+20,admin@test.com,Admin User,$2b$12$URklxzQjE/kIF04stXOnn.FJEv1.u969zQEsAYmVoFxXRVWu73bfq,True,2026-02-23 11:57:33.886006+00:00,2026-02-23 11:57:33.961754+00:00,TENANT,21.0,True,,False
+16,priya12@gmail.com,,$2b$12$3JT2zbzAYsH/BAi9/FVm8e4TMj9oYhC.7YbY09iG94LSVx.s9bfLy,True,2025-11-27 11:08:08.812464+00:00,2025-11-27 11:08:08.829466+00:00,TENANT,18.0,True,,False
+17,priya1@gmail.com,priya kumari,$2b$12$4R/h4J662nS0HF3.22F60exkSc.8xF0njDWaS6/X8.eI/d/gcfGtW,True,2025-11-27 11:12:50.285716+00:00,2025-11-27 20:34:19.681650+00:00,admin,19.0,True,,False
+21,tester@test.com,Tester,$2b$12$LXskRMIDjowaKbHY8xPB5O/LrIXsycxbfFdZO7YIJ2dNq45P4w8..,True,2026-02-23 11:58:50.639274+00:00,2026-02-23 11:58:50.642937+00:00,TENANT,22.0,True,,False
+23,momo@gmail.com,Test User,$2b$12$JlxHWeo/pfiuuRnKk5O9K.XAftxQqVOR3HrNeAUjX6bylN51IR3P.,True,2026-03-28 16:56:36.920642+00:00,2026-03-28 11:33:10.149969+00:00,admin,24.0,False,,False
+14,user1@gmail.com,user1,$2b$12$NGnsi8ut6jmHH9kdC4Jv/e846cz90HKCVwN5UMQWZmcoD9SU2WSK2,True,2025-11-27 00:08:44.452759+00:00,2026-03-12 09:06:19.261298+00:00,user,12.0,False,"{'reports': {'read': True, 'create': False, 'delete': False, 'update': False}, 'vouchers': {'read': True, 'create': False, 'delete': False, 'update': False}, 'masters_items': {'read': True, 'create': False, 'delete': False, 'update': False}, 'sales_invoices': {'read': True, 'create': False, 'delete': False, 'update': False}, 'settings_users': {'read': True, 'create': False, 'delete': False, 'update': False}, 'masters_ledgers': {'read': True, 'create': False, 'delete': False, 'update': False}, 'purchases_bills': {'read': True, 'create': False, 'delete': False, 'update': False}, 'settings_company': {'read': True, 'create': False, 'delete': False, 'update': False}, 'masters_customers': {'read': True, 'create': False, 'delete': False, 'update': False}, 'masters_suppliers': {'read': True, 'create': False, 'delete': False, 'update': False}}",False
+22,abc@gmail.com,testuser,$2b$12$Yuoa0ABJE8IBDJXMYLMwvuFOOfH1BmWgaZIgVT2t2Mg5eBPikKBYq,True,2026-03-09 06:38:47.570025+00:00,2026-03-12 20:41:42.008610+00:00,admin,12.0,False,,False
+18,test@gmail.com,Testcompany,$2b$12$gkySZuH5pUqGWXddNSe8Q.UpkoJKWGMNleckR6uxqY15m1Rzj1uLW,True,2025-11-29 03:11:22.092522+00:00,2025-11-29 03:24:23.514335+00:00,admin,20.0,True,,False
+15,priya@gmail.com,,$2b$12$ZVoWksVcXrJ.pTvA3g6RSu359YvlFXPRyLZqWfL.a6VpYXOZvuuIu,True,2025-11-27 10:48:23.941667+00:00,2025-12-09 06:19:41.137869+00:00,admin,17.0,True,,False
+27,tenant_admin_test@example.com,Tenant Admin,fakehash,True,2026-03-29 01:23:50.926081+00:00,2026-03-29 01:23:50.926084+00:00,admin,28.0,False,,False
+28,repro_owner@example.com,Repro Owner,...,True,2026-03-29 03:24:47.312584+00:00,2026-03-29 03:24:47.312592+00:00,admin,29.0,False,,False
+29,repro_admin@example.com,Repro Admin,...,True,2026-03-29 03:25:10.665860+00:00,2026-03-29 03:25:10.665863+00:00,admin,29.0,False,,False
+30,none_admin_test@example.com,None Admin,fakehash,True,2026-03-29 03:36:49.849744+00:00,2026-03-29 03:36:49.849747+00:00,admin,30.0,False,,False
+10,manisha@gmail.com,Manisha,$2b$12$taU73wwQqAWDCVvMMBHhuOT8Zg1fOMs8BDdct2xkrG0AQEYdgjl4m,True,2025-11-22 13:11:56.848470+00:00,2026-03-14 04:01:12.211031+00:00,admin,13.0,False,,False
+8,restaurant@gmail.com,Mayank2,$2b$12$ioc/bPpHRz7I66L1FnLOiuKXJGrFcWNHzcTC9MrU2/hQM1vuCRDgW,True,2025-11-20 00:04:44.751014+00:00,2026-03-28 10:35:28.913700+00:00,admin,23.0,False,,False
+31,strict_none_admin@example.com,Strict None Admin,fakehash,True,2026-03-29 03:57:53.146930+00:00,2026-03-29 03:57:53.146933+00:00,admin,32.0,False,,False
+32,account@gmail.com,account,$2b$12$CwHTPGMLqtrZD0u1bnEY9.UJFASax1WCTwnle8UnyfoaFuFGXqIya,True,2026-04-04 00:55:40.259242+00:00,2026-04-04 00:55:40.259247+00:00,ghost_billing,33.0,False,,True
+33,billing@prixna.com,Ghost Billing Test,$2b$12$Cglt86R1Ocb0GXBxG.V.ruAanRKi/VdTbggUYdE33ffSZhUm.O9Ou,True,2026-04-04 01:05:46.046531+00:00,2026-04-04 01:05:46.046539+00:00,ghost_billing,,False,,True
+34,support@prixna.com,Ghost Support Test,$2b$12$Cglt86R1Ocb0GXBxG.V.ruAanRKi/VdTbggUYdE33ffSZhUm.O9Ou,True,2026-04-04 01:05:46.046543+00:00,2026-04-04 01:05:46.046545+00:00,ghost_support,,False,,True
+35,tech@prixna.com,Ghost Tech Test,$2b$12$Cglt86R1Ocb0GXBxG.V.ruAanRKi/VdTbggUYdE33ffSZhUm.O9Ou,True,2026-04-04 01:05:46.046547+00:00,2026-04-04 01:05:46.046549+00:00,ghost_tech,,False,,True
+36,test@test.com,Test User,$2b$12$1fGMUrVKr9qtDQlJIBJxceTbE/ez8rmbdqK5jTtzzs9Us/1T.tsra,True,2026-04-12 05:10:46.251172+00:00,2026-04-12 05:10:46.325135+00:00,TENANT,34.0,True,,False
+37,test@example.com,,$2b$12$ldYL9yoTzYqRd662zwoLueShuvNaVKWo7rJca0emfc5uI6QunYYZy,True,2026-04-13 04:32:28.769375+00:00,2026-04-13 04:32:28.793420+00:00,TENANT,35.0,True,,False
+19,test_reset@example.com,Test User,...,True,2026-02-16 07:35:22.256448+00:00,2026-02-16 07:52:45.230750+00:00,superadmin,1.0,False,,True
+7,npg.675@gmail.com,Naresh Sah,$2b$12$zkXxFJSk3Lrpy4dGzipTwutA6wZ4vzcnCNxPf938y/XOSTZIpggfe,True,2025-11-19 07:43:06.780086+00:00,2025-11-19 23:46:27.899415+00:00,superadmin,,False,,True
+4,admin@prixna.com,System Admin,$2b$12$B2nJKHObo.Y0lKXGz5VkaOqyhzR8eGWuY1Rr3RH8bmDqaXtzdUMQa,True,2025-11-18 11:24:56.326195+00:00,2025-11-25 08:07:06.885663+00:00,superadmin,,False,,True
+26,superadmin_test@example.com,Super Admin,fakehash,True,2026-03-29 01:23:50.916663+00:00,2026-03-29 01:23:50.916667+00:00,superadmin,,False,,True
+9,manish@gmail.com,manish shrestha,$2b$12$xmoCDbrtKoiHVLvXGZ.BAOpOVt6QyJS2zInVhEJnCi3j3c439Gb0G,True,2025-11-21 21:17:40.778354+00:00,2026-03-13 06:29:31.608406+00:00,superadmin,12.0,True,,True

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Trial Balance</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 12px; }
+        h1, h2, h3 { margin: 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #000; padding: 4px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .right { text-align: right; }
+        .small { font-size: 10px; }
+    </style>
+</head>
+<body>
+    <h2>{{ company.name }}</h2>
+    {% if company.address %}<div class="small">{{ company.address }}</div>{% endif %}
+    <h3>Trial Balance</h3>
+    <div class="small">
+        As On: {{ report.as_on_date }}<br />
+        Print Date: {{ print_date }}
+        {% if user and user.full_name %}<br />Print by: {{ user.full_name }}{% endif %}
+    </div>
+
+    {% if report.rows %}
+    <table>
+        <thead>
+            <tr>
+                <th>Ledger</th>
+                <th class="right">Debit</th>
+                <th class="right">Credit</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% set total_debit = 0 %}
+        {% set total_credit = 0 %}
+        {% for row in report.rows %}
+            {% set total_debit = total_debit + row.debit %}
+            {% set total_credit = total_credit + row.credit %}
+            <tr>
+                <td>{{ row.ledger_name }}</td>
+                <td class="right">{{ '%.2f'|format(row.debit) }}</td>
+                <td class="right">{{ '%.2f'|format(row.credit) }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <th>Total</th>
+            <th class="right">{{ '%.2f'|format(total_debit) }}</th>
+            <th class="right">{{ '%.2f'|format(total_credit) }}</th>
+        </tr>
+        </tbody>
+    </table>
+    {% else %}
+        <p>No data for selected filters.</p>
+    {% endif %}
+</body>
+</html>

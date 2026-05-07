@@ -1,0 +1,16 @@
+id,name,description,is_active,created_at
+2,Normal User,Normal User,True,2025-12-23 08:49:01.940055+00:00
+1,Starter,Mini,False,2025-12-23 07:29:05.819161+00:00
+3,Admin User,Admin User,True,2025-12-23 09:21:04.713390+00:00
+4,Standard,,True,2025-12-23 09:35:56.403995+00:00
+5,Restaurant,"Restaurant, cafe, hotel",True,2026-03-28 23:09:06.372938+00:00
+6,Pharmacy,"Pharmacy, Clinic",True,2026-03-28 23:13:21.816229+00:00
+10,Update Test T1,,False,2026-03-29 03:51:37.956543+00:00
+9,Sync Test Template,,False,2026-03-29 03:42:17.685525+00:00
+8,Repro Template,,False,2026-03-29 03:24:47.240025+00:00
+7,Bypass Test Template,,False,2026-03-29 01:23:50.961349+00:00
+13,Delivery,Delivery Process,True,2026-03-31 10:48:01.093267+00:00
+11,Analytic Dashboard Widget,Analytic Dashboard Widget,True,2026-03-31 10:37:49.999206+00:00
+15,BASIC,Basic Package,True,2026-04-02 01:35:10.974559+00:00
+16,Restaurant (Copy),"Restaurant, cafe, hotel",False,2026-04-02 03:21:01.858097+00:00
+12,Tasks,Tasks Management,False,2026-03-31 10:47:06.781077+00:00

@@ -1,0 +1,2 @@
+id,tenant_id,task_id,uploaded_by,original_filename,stored_filename,content_type,size_bytes,storage_path,created_at,deleted_at
+1,12,5,9,Hotel Marsyangadi.JPG,1602f0aa7d6b7b4e22411e325ffb9914.jpg,image/jpeg,103281,D:\Accounting System\API\backend\uploads\tenants\12\tasks\5\1602f0aa7d6b7b4e22411e325ffb9914.jpg,2025-12-22 10:38:15.533965+00:00,

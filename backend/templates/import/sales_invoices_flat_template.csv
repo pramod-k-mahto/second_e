@@ -1,0 +1,4 @@
+external_ref,invoice_date,customer,invoice_no,item,qty,rate,discount,tax_rate,warehouse_id
+INV-1001,2025-01-01,Customer A,INV-1001,Product A,2,100,0,13,
+INV-1001,2025-01-01,Customer A,INV-1001,Product B,1,250,0,13,
+INV-1002,2025-01-02,Customer B,INV-1002,Product A,1,100,0,0,

@@ -1,0 +1,3 @@
+external_ref,ledger_name,opening_balance,opening_balance_type
+OB-001,Cash,10000,DEBIT
+OB-002,Capital,10000,CREDIT

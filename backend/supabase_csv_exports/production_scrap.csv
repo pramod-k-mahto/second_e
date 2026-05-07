@@ -1,0 +1,11 @@
+id,company_id,production_order_id,scrap_type,qty,reason,recoverable,saleable,created_by,created_at
+19,14,6,Packaging Scrap,1.8,Packaging trim,False,False,9,2026-04-23 17:56:35.767427+00:00
+20,6,7,Packaging Scrap,1.8,Packaging trim,False,False,7,2026-04-23 17:56:35.767427+00:00
+21,14,12,PCB trim and rejects,1.25,ELECTRONICS scenario scrap,False,True,9,2026-04-23 17:56:35.767427+00:00
+22,14,14,Wood dust and trim,3.75,FURNITURE scenario scrap,True,True,9,2026-04-23 17:56:35.767427+00:00
+23,14,15,Fabric edge trim,5.5,GARMENT scenario scrap,False,False,9,2026-04-23 17:56:35.767427+00:00
+24,14,13,Organic loss,2.1,FOOD scenario scrap,True,False,9,2026-04-23 17:56:35.767427+00:00
+25,6,18,PCB trim and rejects,1.25,ELECTRONICS scenario scrap,False,True,7,2026-04-23 17:56:35.767427+00:00
+26,6,17,Wood dust and trim,3.75,FURNITURE scenario scrap,True,True,7,2026-04-23 17:56:35.767427+00:00
+27,6,21,Fabric edge trim,5.5,GARMENT scenario scrap,False,False,7,2026-04-23 17:56:35.767427+00:00
+28,6,19,Organic loss,2.1,FOOD scenario scrap,True,False,7,2026-04-23 17:56:35.767427+00:00

@@ -1,0 +1,64 @@
+# =========================
+# Node / Frontend
+# =========================
+
+# Dependencies
+/node_modules/
+
+# Next.js / Vite / Frontend build
+/.next/
+/out/
+/dist/
+/build/
+
+# Environment / secrets
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Optional cache folders
+.cache/
+
+# =========================
+# Python / Backend (FastAPI + PyInstaller)
+# =========================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build / distribution folders
+backend/dist/
+backend/build/
+*.exe
+*.pkg
+*.pyz
+
+# Environment / secrets
+*.sqlite3
+*.log
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Mypy / linting cache
+.mypy_cache/
+.pytest_cache/
+.coverage

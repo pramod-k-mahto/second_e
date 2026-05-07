@@ -1,0 +1,16 @@
+{
+  "group_key": "order_id",
+  "header": {
+    "date": "order_date",
+    "customer_name": "customer",
+    "reference": "order_id",
+    "external_ref": "external_ref"
+  },
+  "line": {
+    "item_name": "item",
+    "quantity": "qty",
+    "rate": "rate",
+    "discount": "discount",
+    "tax_rate": "tax_rate"
+  }
+}
