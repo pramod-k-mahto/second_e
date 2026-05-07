@@ -18,6 +18,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /root/mern_docker
+            cd /root/second_e
             git pull origin main
             docker compose up -d --build
