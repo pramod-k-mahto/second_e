@@ -2085,9 +2085,12 @@ def export_manufacturing_report(
         csv_data = "No data\n"
     else:
         keys = list(rows[0].keys())
-        lines = [",".join([f"\"{str(k).replace('\"', '\"\"')}\"" for k in keys])]
+        # lines = [",".join([f"\"{str(k).replace('\"', '\"\"')}\"" for k in keys])]
+        lines = [",".join(['"' + str(k).replace('"', '""') + '"' for k in keys])]
+
         for row in rows:
-            vals = [f"\"{str(row.get(k, '')).replace('\"', '\"\"')}\"" for k in keys]
+            vals = ['"' + str(row.get(k, '')).replace('"', '""') + '"' for k in keys]
+            # vals = [f"\"{str(row.get(k, '')).replace('\"', '\"\"')}\"" for k in keys]
             lines.append(",".join(vals))
         csv_data = "\n".join(lines)
 
