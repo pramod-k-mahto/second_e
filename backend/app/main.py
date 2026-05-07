@@ -186,47 +186,47 @@ def _sql_migrations_dir() -> Path | None:
     return None
 
 
-def _apply_sql_migrations() -> None:
-    migrations_dir = _sql_migrations_dir()
-    if not migrations_dir:
-        _logger.warning(
-            "SQL migrations directory not found; set MIGRATIONS_DIR or ship db/migrations next to the app. "
-            "Schema may be incomplete versus SQLAlchemy create_all alone."
-        )
-        return
+# def _apply_sql_migrations() -> None:
+#     migrations_dir = _sql_migrations_dir()
+#     if not migrations_dir:
+#         _logger.warning(
+#             "SQL migrations directory not found; set MIGRATIONS_DIR or ship db/migrations next to the app. "
+#             "Schema may be incomplete versus SQLAlchemy create_all alone."
+#         )
+#         return
 
-    migration_files = sorted(migrations_dir.glob("*.sql"))
-    if not migration_files:
-        return
+#     migration_files = sorted(migrations_dir.glob("*.sql"))
+#     if not migration_files:
+#         return
 
-    with engine.connect().execution_options(isolation_level="AUTOCOMMIT") as conn:
-        conn.execute(
-            text(
-                """
-                CREATE TABLE IF NOT EXISTS schema_migrations (
-                  filename TEXT PRIMARY KEY,
-                  applied_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-                );
-                """
-            )
-        )
+#     with engine.connect().execution_options(isolation_level="AUTOCOMMIT") as conn:
+#         conn.execute(
+#             text(
+#                 """
+#                 CREATE TABLE IF NOT EXISTS schema_migrations (
+#                   filename TEXT PRIMARY KEY,
+#                   applied_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+#                 );
+#                 """
+#             )
+#         )
 
-        applied = {
-            row[0]
-            for row in conn.execute(text("SELECT filename FROM schema_migrations")).fetchall()
-        }
+#         applied = {
+#             row[0]
+#             for row in conn.execute(text("SELECT filename FROM schema_migrations")).fetchall()
+#         }
 
-        for path in migration_files:
-            if path.name in applied:
-                continue
+#         for path in migration_files:
+#             if path.name in applied:
+#                 continue
 
-            sql = path.read_text(encoding="utf-8")
-            if sql.strip():
-                conn.execute(text(sql))
-            conn.execute(
-                text("INSERT INTO schema_migrations (filename) VALUES (:filename)"),
-                {"filename": path.name},
-            )
+#             sql = path.read_text(encoding="utf-8")
+#             if sql.strip():
+#                 conn.execute(text(sql))
+#             conn.execute(
+#                 text("INSERT INTO schema_migrations (filename) VALUES (:filename)"),
+#                 {"filename": path.name},
+#             )
 
 
 # ------------ CORS ------------
@@ -250,7 +250,7 @@ Base.metadata.create_all(bind=engine)
 
 # Apply SQL migrations (idempotent). This complements create_all() by handling
 # ALTER TABLE / data backfills that SQLAlchemy won't perform.
-_apply_sql_migrations()
+# _apply_sql_migrations()
 
 # ------------ Startup: ensure admin user ------------
 
